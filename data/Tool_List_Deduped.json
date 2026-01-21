@@ -1,0 +1,4288 @@
+[
+    {
+        "function_name": "AbstractJarAgent.runJarAgent",
+        "description": "Runs the jar agent with the specified options and attaches it to the provided Instrumentation instance. It initializes common parameters, performs test-specific initialization, and starts a special thread for test-specific actions.",
+        "tool_id": "java_0000",
+        "count": 1,
+        "example_ids": [
+            "93"
+        ]
+    },
+    {
+        "function_name": "AbstractTransportSearchableSnapshotsAction.shardOperation",
+        "description": "Executes a shard-level operation on a searchable snapshot, ensuring the license is valid and the directory is correctly unwrapped before performing the operation.",
+        "tool_id": "java_0001",
+        "count": 1,
+        "example_ids": [
+            "54"
+        ]
+    },
+    {
+        "function_name": "AltibaseGrantee.prepareObjectsStatement",
+        "description": "Prepares a JDBC statement for querying system privileges and their grantors for a given Altibase grantee.",
+        "tool_id": "java_0002",
+        "count": 1,
+        "example_ids": [
+            "13"
+        ]
+    },
+    {
+        "function_name": "BaseMarkupSerializer.surrogates",
+        "description": "Processes surrogate pairs in XML content, ensuring they are valid XML characters and serializes them appropriately, handling cases both inside and outside of CDATA sections.",
+        "tool_id": "java_0003",
+        "count": 1,
+        "example_ids": [
+            "74"
+        ]
+    },
+    {
+        "function_name": "BasePolicyDataProvider.getRegistryPolicyValue",
+        "description": "Retrieves the value of a specified property from the DBeaver registry policy node if it exists, specifically for Windows systems.",
+        "tool_id": "java_0004",
+        "count": 1,
+        "example_ids": [
+            "11"
+        ]
+    },
+    {
+        "function_name": "Basic.checkSizes",
+        "description": "Checks if the sizes of various views of the environment map match the expected size and if the map's empty status is consistent with the expected size.",
+        "tool_id": "java_0005",
+        "count": 1,
+        "example_ids": [
+            "45"
+        ]
+    },
+    {
+        "function_name": "Booleans.parseBooleanLenient",
+        "description": "Parses a string to a boolean value leniently, allowing various string representations to be interpreted as 'false', and defaults to 'true' for other cases, unless a default value is provided.",
+        "tool_id": "java_0006",
+        "count": 1,
+        "example_ids": [
+            "57"
+        ]
+    },
+    {
+        "function_name": "CCRUsageTransportAction.masterOperation",
+        "description": "This function gathers usage statistics of the CCR feature in Elasticsearch and sends the results to the provided ActionListener.",
+        "tool_id": "java_0007",
+        "count": 1,
+        "example_ids": [
+            "51"
+        ]
+    },
+    {
+        "function_name": "CCSDuelIT.parseEntity",
+        "description": "Parses an HttpEntity using the provided entity parser function and parser configuration, and returns the parsed response of type Resp.",
+        "tool_id": "java_0008",
+        "count": 1,
+        "example_ids": [
+            "56"
+        ]
+    },
+    {
+        "function_name": "ClassFileFinder.findClassFile",
+        "description": "Finds the class file for a given class name within the specified class path and returns the path to the class file.",
+        "tool_id": "java_0009",
+        "count": 1,
+        "example_ids": [
+            "92"
+        ]
+    },
+    {
+        "function_name": "CompositeRuntimeField.createChildRuntimeField",
+        "description": "Attempts to create a child runtime field for a composite field, but since composite fields cannot have children, it throws an IllegalArgumentException.",
+        "tool_id": "java_0010",
+        "count": 1,
+        "example_ids": [
+            "66"
+        ]
+    },
+    {
+        "function_name": "ConsoleAnnotator.annotate",
+        "description": "Processes the given MarkupText for the specified context using a chain of ConsoleAnnotators, updating or removing annotators as necessary.",
+        "tool_id": "java_0011",
+        "count": 1,
+        "example_ids": [
+            "37"
+        ]
+    },
+    {
+        "function_name": "CookieHeaderTest.create",
+        "description": "Creates a DummyServer instance with SSL support using the provided socket address and SSL context.",
+        "tool_id": "java_0012",
+        "count": 1,
+        "example_ids": [
+            "48"
+        ]
+    },
+    {
+        "function_name": "CoroutineManager.co_exit_to",
+        "description": "This function switches the execution from one coroutine to another within the CoroutineManager, passing an argument object to the target coroutine. It also checks if the target coroutine is available and throws an exception if not.",
+        "tool_id": "java_0013",
+        "count": 1,
+        "example_ids": [
+            "71"
+        ]
+    },
+    {
+        "function_name": "DB2Tablespace.resolveTablespaceReference",
+        "description": "Resolves a tablespace reference, which can be a name or a direct reference, to a DB2Tablespace object using the provided data source.",
+        "tool_id": "java_0014",
+        "count": 1,
+        "example_ids": [
+            "3"
+        ]
+    },
+    {
+        "function_name": "DB2ViewBaseDepCache.prepareObjectsStatement",
+        "description": "Prepares a JDBC statement for querying metadata of a specific DB2 view in a given schema.",
+        "tool_id": "java_0015",
+        "count": 1,
+        "example_ids": [
+            "4"
+        ]
+    },
+    {
+        "function_name": "DateScriptFieldType.createFieldType",
+        "description": "Creates a new field type for a date script with the provided parameters.",
+        "tool_id": "java_0016",
+        "count": 1,
+        "example_ids": [
+            "64"
+        ]
+    },
+    {
+        "function_name": "DesAPITest.init",
+        "description": "Initializes the DES cipher with the specified algorithm, mode, and padding scheme.",
+        "tool_id": "java_0017",
+        "count": 1,
+        "example_ids": [
+            "44"
+        ]
+    },
+    {
+        "function_name": "DurationImpl.alignSigns",
+        "description": "Aligns the signs of BigDecimal elements in a subarray to be consistent with each other, potentially borrowing from adjacent elements to adjust values and maintain the overall magnitude.",
+        "tool_id": "java_0018",
+        "count": 1,
+        "example_ids": [
+            "69"
+        ]
+    },
+    {
+        "function_name": "EFSNIOFile.setContents",
+        "description": "Sets the contents of a file with data from the provided InputStream, with options to force the operation and to keep or discard the file history.",
+        "tool_id": "java_0019",
+        "count": 1,
+        "example_ids": [
+            "8"
+        ]
+    },
+    {
+        "function_name": "EFSNIOResource.copy",
+        "description": "Copies the NIO resource to the specified destination path on the filesystem, with an option to force overwrite and a monitor to track progress.",
+        "tool_id": "java_0020",
+        "count": 1,
+        "example_ids": [
+            "7"
+        ]
+    },
+    {
+        "function_name": "Encodings.getEncodingInfo",
+        "description": "Retrieves the encoding information for a given encoding name, optionally allowing Java encoding names if the standard IANA name is not found.",
+        "tool_id": "java_0021",
+        "count": 1,
+        "example_ids": [
+            "73"
+        ]
+    },
+    {
+        "function_name": "ExasolExecutionContext.setCurrentSchema",
+        "description": "Sets the current schema for the Exasol execution context to the specified schema name, and monitors the progress of this operation.",
+        "tool_id": "java_0022",
+        "count": 1,
+        "example_ids": [
+            "12"
+        ]
+    },
+    {
+        "function_name": "ExportNodeTest.doGeneric",
+        "description": "Executes a generic operation on the given receiver object with the provided argument, using a specialized inlinable node and bound to a node library.",
+        "tool_id": "java_0023",
+        "count": 1,
+        "example_ids": [
+            "95"
+        ]
+    },
+    {
+        "function_name": "FireBirdUtils.getViewSourceWithHeader",
+        "description": "Generates the SQL script to create or alter a Firebird database view, including the view definition header, based on the server version and the provided source.",
+        "tool_id": "java_0024",
+        "count": 1,
+        "example_ids": [
+            "2"
+        ]
+    },
+    {
+        "function_name": "FlatNodeGenFactory.generateIntrospectionInfo",
+        "description": "Generates introspection information for a given class representing a node in the Truffle DSL processor.",
+        "tool_id": "java_0025",
+        "count": 1,
+        "example_ids": [
+            "97"
+        ]
+    },
+    {
+        "function_name": "FunGameBase.onFinish",
+        "description": "Handles the finish event of the FunGame refresh header, updating the last finish status and handling manual operations if necessary.",
+        "tool_id": "java_0026",
+        "count": 1,
+        "example_ids": [
+            "14"
+        ]
+    },
+    {
+        "function_name": "GenericTypesVisitor.attachGenericTypesInfo",
+        "description": "Attaches generic type information to a constructor invocation instruction if the instruction's result argument has generic types and the class being instantiated has generic type parameters.",
+        "tool_id": "java_0027",
+        "count": 1,
+        "example_ids": [
+            "17"
+        ]
+    },
+    {
+        "function_name": "GeometryPresentation.createPresentation",
+        "description": "Initializes the GIS geometry presentation within the provided UI composite, using the given result set controller.",
+        "tool_id": "java_0028",
+        "count": 1,
+        "example_ids": [
+            "0"
+        ]
+    },
+    {
+        "function_name": "HbaseAdapter.updateConfig",
+        "description": "Updates the HBase mapping configuration for a given file name with the provided mapping configuration, ensuring the outer adapter key remains unchanged.",
+        "tool_id": "java_0029",
+        "count": 1,
+        "example_ids": [
+            "20"
+        ]
+    },
+    {
+        "function_name": "Http2TestExchangeImpl.sendResponseHeaders",
+        "description": "Sends HTTP response headers with a given status code and response length. It handles special cases for certain status codes and request types.",
+        "tool_id": "java_0030",
+        "count": 1,
+        "example_ids": [
+            "49"
+        ]
+    },
+    {
+        "function_name": "InsnDecoder.invokePolymorphic",
+        "description": "Creates an InvokePolymorphicNode based on the given instruction data and whether the invocation is a range or not.",
+        "tool_id": "java_0031",
+        "count": 1,
+        "example_ids": [
+            "16"
+        ]
+    },
+    {
+        "function_name": "InstrumentableProcessor.createCallConverter",
+        "description": "Generates a CodeTree that represents a call to a converter method, handling both static and instance methods, and accommodating for different numbers of parameters.",
+        "tool_id": "java_0032",
+        "count": 1,
+        "example_ids": [
+            "96"
+        ]
+    },
+    {
+        "function_name": "Intro.step",
+        "description": "Updates the graphics of an intro animation based on the specified width and height.",
+        "tool_id": "java_0033",
+        "count": 1,
+        "example_ids": [
+            "76"
+        ]
+    },
+    {
+        "function_name": "JNIBridge.setLauncherInfo",
+        "description": "Sets the launcher information in the JNI Bridge, which includes the path and name of the launcher.",
+        "tool_id": "java_0034",
+        "count": 1,
+        "example_ids": [
+            "10"
+        ]
+    },
+    {
+        "function_name": "JdkXmlFeatures.getSystemProperty",
+        "description": "Checks if the specified system property is set and applies its boolean value to the given XML feature. Throws NumberFormatException if the property value is invalid.",
+        "tool_id": "java_0035",
+        "count": 1,
+        "example_ids": [
+            "75"
+        ]
+    },
+    {
+        "function_name": "JndiLoginModule.verifyPassword",
+        "description": "Compares an encrypted password with a plaintext password to verify if they match after encryption.",
+        "tool_id": "java_0036",
+        "count": 1,
+        "example_ids": [
+            "77"
+        ]
+    },
+    {
+        "function_name": "LargeHandshakeTest.format",
+        "description": "Outputs a formatted Java constant declaration for a given name and value, splitting the value into multiple lines if it exceeds 60 characters.",
+        "tool_id": "java_0037",
+        "count": 1,
+        "example_ids": [
+            "47"
+        ]
+    },
+    {
+        "function_name": "LibraryExport.createDelegate",
+        "description": "Creates a delegate library instance using the provided factory and delegate. If the delegate is not adoptable, it forces adoption to ensure proper parent pointer implementation.",
+        "tool_id": "java_0038",
+        "count": 1,
+        "example_ids": [
+            "99"
+        ]
+    },
+    {
+        "function_name": "LoopConditionProfile.calculateProbability",
+        "description": "Calculates the probability of a loop condition being true based on the counts of true and false evaluations.",
+        "tool_id": "java_0039",
+        "count": 1,
+        "example_ids": [
+            "98"
+        ]
+    },
+    {
+        "function_name": "MacBaseInstallerBundler.validateAppImageAndBundeler",
+        "description": "Validates the application image and bundler parameters to ensure that the application image directory exists, has a valid name, and checks if it's signed when required.",
+        "tool_id": "java_0040",
+        "count": 1,
+        "example_ids": [
+            "68"
+        ]
+    },
+    {
+        "function_name": "MacDmgBundler.prepareDMGSetupScript",
+        "description": "Prepares a DMG setup script for a macOS application package, including the volume URL, background image file, and installation directory.",
+        "tool_id": "java_0041",
+        "count": 1,
+        "example_ids": [
+            "67"
+        ]
+    },
+    {
+        "function_name": "MethodInvokeTest.checkInjectedInvoker",
+        "description": "Checks if the injected invoker class in the CSM instance is hidden, belongs to the same module as the expected class, and appears before the expected class on the stack.",
+        "tool_id": "java_0042",
+        "count": 1,
+        "example_ids": [
+            "46"
+        ]
+    },
+    {
+        "function_name": "NFILibrary.isMemberReadable",
+        "description": "Checks if the specified symbol is readable in the native function interface library associated with the current object.",
+        "tool_id": "java_0043",
+        "count": 1,
+        "example_ids": [
+            "94"
+        ]
+    },
+    {
+        "function_name": "NestedQueryBuilder.doBuild",
+        "description": "Builds the nested query based on the provided search context and updates the inner hits context accordingly. It throws an IOException if the nested path is not mapped and ignoreUnmapped is false.",
+        "tool_id": "java_0044",
+        "count": 1,
+        "example_ids": [
+            "60"
+        ]
+    },
+    {
+        "function_name": "NestedValueFetcher.createSourceMapStub",
+        "description": "Creates a stubbed source map for a nested document structure by iterating through the nested path parts and constructing a nested map hierarchy.",
+        "tool_id": "java_0045",
+        "count": 1,
+        "example_ids": [
+            "38"
+        ]
+    },
+    {
+        "function_name": "NodeIdConverter.format",
+        "description": "Appends the node ID to the provided StringBuilder if the node ID is available from the NodeAndClusterIdStateListener.",
+        "tool_id": "java_0046",
+        "count": 1,
+        "example_ids": [
+            "39"
+        ]
+    },
+    {
+        "function_name": "ObjectMapEntryReplayDecoder.decode",
+        "description": "Decodes a list of objects representing alternating keys and values into a list of map entries.",
+        "tool_id": "java_0047",
+        "count": 1,
+        "example_ids": [
+            "36"
+        ]
+    },
+    {
+        "function_name": "OptionSpecBuilder.requiredUnless",
+        "description": "Configures the option parser to require the current option unless one of the specified dependent options is present.",
+        "tool_id": "java_0048",
+        "count": 1,
+        "example_ids": [
+            "78"
+        ]
+    },
+    {
+        "function_name": "PersonController.personal",
+        "description": "This method retrieves personal information for a logged-in user and adds it to the model before returning the view name for the personal information page.",
+        "tool_id": "java_0049",
+        "count": 1,
+        "example_ids": [
+            "19"
+        ]
+    },
+    {
+        "function_name": "PlainTextPresentation.createPresentation",
+        "description": "Initializes the plain text presentation for a result set controller within a given parent composite UI element, setting up a styled text area with appropriate properties and listeners.",
+        "tool_id": "java_0050",
+        "count": 1,
+        "example_ids": [
+            "5"
+        ]
+    },
+    {
+        "function_name": "PmsProductCategoryController.updateShowStatus",
+        "description": "Updates the show status of a list of product categories to either visible or hidden.",
+        "tool_id": "java_0051",
+        "count": 1,
+        "example_ids": [
+            "24"
+        ]
+    },
+    {
+        "function_name": "PmsProductServiceImpl.updateNewStatus",
+        "description": "Updates the new status for a list of product IDs in the product management system.",
+        "tool_id": "java_0052",
+        "count": 1,
+        "example_ids": [
+            "22"
+        ]
+    },
+    {
+        "function_name": "ProxyConnection.prepareCall",
+        "description": "Creates a CallableStatement object for calling database stored procedures, with the specified result set type, concurrency type, and holdability.",
+        "tool_id": "java_0053",
+        "count": 1,
+        "example_ids": [
+            "26"
+        ]
+    },
+    {
+        "function_name": "RedissonAsyncCache.putIfAbsent",
+        "description": "Asynchronously puts the given value associated with the specified key into the cache if it is not already present, and returns a CompletableFuture that will complete with an Optional of the previous value.",
+        "tool_id": "java_0054",
+        "count": 1,
+        "example_ids": [
+            "30"
+        ]
+    },
+    {
+        "function_name": "RedissonConnection.bitOp",
+        "description": "Performs a bitwise operation between the given keys and stores the result in the destination key. The NOT operation is not supported for multiple source keys.",
+        "tool_id": "java_0055",
+        "count": 1,
+        "example_ids": [
+            "35"
+        ]
+    },
+    {
+        "function_name": "RedissonMapCache.putOperationAsync",
+        "description": "Asynchronously stores a key-value pair in the Redisson map cache.",
+        "tool_id": "java_0056",
+        "count": 1,
+        "example_ids": [
+            "33"
+        ]
+    },
+    {
+        "function_name": "RedissonPermitExpirableSemaphore.tryAcquireAsync",
+        "description": "Attempts to acquire a permit from the semaphore asynchronously, with the ability to specify the wait time, lease time, and time unit. Returns a future that will be completed with the permit ID if acquired.",
+        "tool_id": "java_0057",
+        "count": 1,
+        "example_ids": [
+            "32"
+        ]
+    },
+    {
+        "function_name": "RedissonRx.getQueue",
+        "description": "Retrieves a reactive queue instance with the specified name and codec.",
+        "tool_id": "java_0058",
+        "count": 1,
+        "example_ids": [
+            "31"
+        ]
+    },
+    {
+        "function_name": "RegexConstraint.initIRPattern",
+        "description": "Initializes and compiles a regex Pattern based on the category of the constraint and the index of the rule.",
+        "tool_id": "java_0059",
+        "count": 1,
+        "example_ids": [
+            "80"
+        ]
+    },
+    {
+        "function_name": "Res9patchStreamDecoder.decode",
+        "description": "Decodes a 9-patch image from the given input stream and writes the decoded PNG image to the specified output stream. Returns true if the operation is successful, otherwise false.",
+        "tool_id": "java_0060",
+        "count": 1,
+        "example_ids": [
+            "15"
+        ]
+    },
+    {
+        "function_name": "RootObjectMapper.doXContent",
+        "description": "Serializes the RootObjectMapper settings to XContent, with options to include default values and to skip runtime fields.",
+        "tool_id": "java_0061",
+        "count": 1,
+        "example_ids": [
+            "65"
+        ]
+    },
+    {
+        "function_name": "RoutingNodesChangedObserver.shardInitialized",
+        "description": "Notifies the observer that an unassigned shard has changed to an initializing state.",
+        "tool_id": "java_0062",
+        "count": 1,
+        "example_ids": [
+            "40"
+        ]
+    },
+    {
+        "function_name": "SAXFilterFactoryImpl.resolveEntity",
+        "description": "Resolves an entity using its public identifier and system identifier. If the system identifier matches a specific known value, it returns a new InputSource with the system ID converted to a URL; otherwise, it returns null to use the default behavior.",
+        "tool_id": "java_0063",
+        "count": 1,
+        "example_ids": [
+            "79"
+        ]
+    },
+    {
+        "function_name": "SQLCompletionAnalyzer.makeProposalsFromObject",
+        "description": "Generates SQL completion proposals based on the given database object, name preference, and additional parameters.",
+        "tool_id": "java_0064",
+        "count": 1,
+        "example_ids": [
+            "1"
+        ]
+    },
+    {
+        "function_name": "SamlObjectSignerTests.getChildren",
+        "description": "Retrieves all child nodes of a specified type from a given node.",
+        "tool_id": "java_0065",
+        "count": 1,
+        "example_ids": [
+            "52"
+        ]
+    },
+    {
+        "function_name": "ScoreFunctionBuilders.exponentialDecayFunction",
+        "description": "Creates an ExponentialDecayFunctionBuilder which is used to score documents with a function that decays exponentially from a certain origin.",
+        "tool_id": "java_0066",
+        "count": 1,
+        "example_ids": [
+            "61"
+        ]
+    },
+    {
+        "function_name": "SearchHit.declareInnerHitsParseFields",
+        "description": "Configures an ObjectParser to parse the inner hits fields of a search result.",
+        "tool_id": "java_0067",
+        "count": 1,
+        "example_ids": [
+            "41"
+        ]
+    },
+    {
+        "function_name": "SearchableSnapshotDirectory.create",
+        "description": "Creates a new instance of a searchable snapshot directory for a shard in a repository with the provided settings and services.",
+        "tool_id": "java_0068",
+        "count": 1,
+        "example_ids": [
+            "55"
+        ]
+    },
+    {
+        "function_name": "SecureMockMaker.createSpy",
+        "description": "Creates a spy instance for a given object using the provided mock creation settings and handler. This is used within the Elasticsearch test framework.",
+        "tool_id": "java_0069",
+        "count": 1,
+        "example_ids": [
+            "43"
+        ]
+    },
+    {
+        "function_name": "ServiceManager.newTimeout",
+        "description": "Schedules a new timeout to execute a TimerTask after a specified delay. If the service manager is shutting down, it returns a dummy timeout instead.",
+        "tool_id": "java_0070",
+        "count": 1,
+        "example_ids": [
+            "34"
+        ]
+    },
+    {
+        "function_name": "SessionHandler.exceptionCaught",
+        "description": "Handles an exception event by logging the error and closing the channel associated with the provided ChannelHandlerContext.",
+        "tool_id": "java_0071",
+        "count": 1,
+        "example_ids": [
+            "21"
+        ]
+    },
+    {
+        "function_name": "SmsHomeNewProductServiceImpl.list",
+        "description": "Retrieves a list of SmsHomeNewProduct entities based on the provided product name, recommendation status, and pagination settings.",
+        "tool_id": "java_0072",
+        "count": 1,
+        "example_ids": [
+            "23"
+        ]
+    },
+    {
+        "function_name": "SmsHomeRecommendSubjectController.updateSort",
+        "description": "Updates the sort order of a recommended subject by its ID and returns a common result indicating success or failure.",
+        "tool_id": "java_0073",
+        "count": 1,
+        "example_ids": [
+            "25"
+        ]
+    },
+    {
+        "function_name": "SpreadsheetPresentation.refreshData",
+        "description": "Refreshes the data in the spreadsheet view, with options to refresh metadata, append data, and keep the current state.",
+        "tool_id": "java_0074",
+        "count": 1,
+        "example_ids": [
+            "6"
+        ]
+    },
+    {
+        "function_name": "SysRoleController.queryPageRoleCount",
+        "description": "This method queries for a paginated list of role counts, where each role's count represents the number of users associated with that role.",
+        "tool_id": "java_0075",
+        "count": 1,
+        "example_ids": [
+            "18"
+        ]
+    },
+    {
+        "function_name": "TermQueryBuilderTests.termQuery",
+        "description": "Constructs a term query based on the provided field type, value, and case sensitivity setting.",
+        "tool_id": "java_0076",
+        "count": 1,
+        "example_ids": [
+            "42"
+        ]
+    },
+    {
+        "function_name": "TestObjectGraphAfterGC.doTesting",
+        "description": "Executes a test that allocates an object graph based on the provided test case data, runs garbage collection, checks the object graph references, and verifies specific entries in the garbage collector log.",
+        "tool_id": "java_0077",
+        "count": 1,
+        "example_ids": [
+            "81"
+        ]
+    },
+    {
+        "function_name": "ToTextStream.characters",
+        "description": "Writes a range of characters from a character array to the text stream. It handles temporary and final output states differently, normalizing characters if necessary and tracing the event if a tracer is set.",
+        "tool_id": "java_0078",
+        "count": 1,
+        "example_ids": [
+            "72"
+        ]
+    },
+    {
+        "function_name": "TransformIndexerStateTests.doDeleteByQuery",
+        "description": "Simulates the deletion of documents by a query in a test environment by invoking the response listener with a mock `BulkByScrollResponse`.",
+        "tool_id": "java_0079",
+        "count": 1,
+        "example_ids": [
+            "50"
+        ]
+    },
+    {
+        "function_name": "TruncateTranslogAction.execute",
+        "description": "Truncates the translog for a given shard path by creating a new empty checkpoint and translog file, and removes the existing translog files.",
+        "tool_id": "java_0080",
+        "count": 1,
+        "example_ids": [
+            "59"
+        ]
+    },
+    {
+        "function_name": "TwoSum.twoSum",
+        "description": "Finds two numbers in the given array that add up to the target sum and returns their indices.",
+        "tool_id": "java_0081",
+        "count": 1,
+        "example_ids": [
+            "27"
+        ]
+    },
+    {
+        "function_name": "VotingOnlyNodePlugin.fullMasterWithOlderState",
+        "description": "Generates a predicate that checks if a Join object represents a full master node with a state that is older than the provided local accepted term and version.",
+        "tool_id": "java_0082",
+        "count": 1,
+        "example_ids": [
+            "53"
+        ]
+    },
+    {
+        "function_name": "XContentBuilder.map",
+        "description": "Serializes a map into the XContentBuilder, with options to ensure there are no self-references within the map and to include start and end object headers in the output.",
+        "tool_id": "java_0083",
+        "count": 1,
+        "example_ids": [
+            "58"
+        ]
+    },
+    {
+        "function_name": "XMLNamespaceBinder.endElement",
+        "description": "Signals the end of an XML element, handling namespace-related processing if namespaces are enabled, or delegating to the document handler otherwise.",
+        "tool_id": "java_0084",
+        "count": 1,
+        "example_ids": [
+            "70"
+        ]
+    },
+    {
+        "function_name": "argumenttypes001.runThis",
+        "description": "Executes the test logic with the provided command-line arguments and directs the output to the specified PrintStream.",
+        "tool_id": "java_0085",
+        "count": 1,
+        "example_ids": [
+            "86"
+        ]
+    },
+    {
+        "function_name": "checkInnerFields",
+        "description": "Checks if the inner fields of the given RedefClass instance have the expected value. If not, it sets the test status to failed and logs a complaint.",
+        "tool_id": "java_0086",
+        "count": 1,
+        "example_ids": [
+            "84"
+        ]
+    },
+    {
+        "function_name": "classfloadhk005.runIt",
+        "description": "Executes the test to check if a class has been correctly instrumented by loading the class and invoking a method to verify the expected value change.",
+        "tool_id": "java_0087",
+        "count": 1,
+        "example_ids": [
+            "85"
+        ]
+    },
+    {
+        "function_name": "clear001a.runIt",
+        "description": "Executes a series of operations including creating an object of a tested class, invoking a method with a breakpoint, and logging the results to the provided PrintStream.",
+        "tool_id": "java_0088",
+        "count": 1,
+        "example_ids": [
+            "82"
+        ]
+    },
+    {
+        "function_name": "configStorage.dynamicCredentialsScheduledExecutorService",
+        "description": "Creates a ScheduledExecutorService that periodically loads Elasticsearch credentials from a specified file at a given interval, using provided basic credentials.",
+        "tool_id": "java_0089",
+        "count": 1,
+        "example_ids": [
+            "28"
+        ]
+    },
+    {
+        "function_name": "dvRangeQuery",
+        "description": "Creates a range query for binary doc values using the specified field, query type, range, and inclusion flags.",
+        "tool_id": "java_0090",
+        "count": 1,
+        "example_ids": [
+            "62"
+        ]
+    },
+    {
+        "function_name": "filter_s002.setting22MethodEntryRequest",
+        "description": "Sets up a MethodEntryRequest with specified thread filter, class filter, suspend policy, and custom property. Throws JDITestRuntimeException on failure.",
+        "tool_id": "java_0091",
+        "count": 1,
+        "example_ids": [
+            "88"
+        ]
+    },
+    {
+        "function_name": "invokemethod007.runIt",
+        "description": "Processes command-line arguments for a debug session and logs the output to the provided PrintStream.",
+        "tool_id": "java_0092",
+        "count": 1,
+        "example_ids": [
+            "91"
+        ]
+    },
+    {
+        "function_name": "propertyTransferredToCollectorBuilder",
+        "description": "Tests that a given property is transferred correctly to the ActiveMQCollector.Builder during the setup of a Zipkin server.",
+        "tool_id": "java_0093",
+        "count": 1,
+        "example_ids": [
+            "29"
+        ]
+    },
+    {
+        "function_name": "runThis",
+        "description": "Executes the test runner with provided arguments and a print stream for logging. It handles the debuggee binding, output redirection, and test execution flow.",
+        "tool_id": "java_0094",
+        "count": 1,
+        "example_ids": [
+            "89"
+        ]
+    },
+    {
+        "function_name": "sourcepaths002.runIt",
+        "description": "Executes a test that interacts with a debuggee environment to check for source paths of certain reference types, handling various scenarios and logging the output.",
+        "tool_id": "java_0095",
+        "count": 1,
+        "example_ids": [
+            "90"
+        ]
+    },
+    {
+        "function_name": "suspendpolicy017.settingVMDeathRequest",
+        "description": "Creates a VMDeathRequest with the specified suspend policy and property. Throws a JDITestRuntimeException if the request cannot be set.",
+        "tool_id": "java_0096",
+        "count": 1,
+        "example_ids": [
+            "87"
+        ]
+    },
+    {
+        "function_name": "thrcputime002.runIt",
+        "description": "Executes a performance test by running a specific thread for a given number of iterations and logs the output to the provided PrintStream. It also handles synchronization and status checks before, during, and after the thread execution.",
+        "tool_id": "java_0097",
+        "count": 1,
+        "example_ids": [
+            "83"
+        ]
+    },
+    {
+        "function_name": "withinQuery",
+        "description": "Creates a query for a range field where the values are within the specified range, with options to include or exclude the lower and upper bounds.",
+        "tool_id": "java_0098",
+        "count": 1,
+        "example_ids": [
+            "63"
+        ]
+    },
+    {
+        "function_name": "writeMultiPoint",
+        "description": "Serializes a MultiPoint geometry into a ByteBuffer with a specified XYZM mode, which includes writing the header and the number of points.",
+        "tool_id": "java_0099",
+        "count": 1,
+        "example_ids": [
+            "9"
+        ]
+    },
+    {
+        "function_name": "B",
+        "description": "This complex function initializes a task queue with customizable concurrency, task addition, and event handling capabilities. It allows for synchronous and asynchronous task execution, pausing and resuming the queue, and handling various queue events.",
+        "tool_id": "javascript_0000",
+        "count": 1,
+        "example_ids": [
+            "42"
+        ]
+    },
+    {
+        "function_name": "ChartSeriesGenerator",
+        "description": "This function creates a new ChartSeries with customizable settings for axis labels, data points, and color schemes, and attaches it to a given chart layout.",
+        "tool_id": "javascript_0001",
+        "count": 1,
+        "example_ids": [
+            "15"
+        ]
+    },
+    {
+        "function_name": "DynamicChartGenerator",
+        "description": "This function creates a dynamic chart based on user input, applies a scaling factor to the axis values, and integrates the chart into a specified dashboard for display.",
+        "tool_id": "javascript_0002",
+        "count": 1,
+        "example_ids": [
+            "13"
+        ]
+    },
+    {
+        "function_name": "EventScheduler",
+        "description": "This function schedules a series of events, with each event possibly dependent on the completion of other events. It includes concurrency control to limit the number of simultaneous events.",
+        "tool_id": "javascript_0003",
+        "count": 1,
+        "example_ids": [
+            "29"
+        ]
+    },
+    {
+        "function_name": "Sde",
+        "description": "This asynchronous function retrieves a map of remote Git references and their corresponding commit hashes for a given repository URL, using a specified starting directory.",
+        "tool_id": "javascript_0004",
+        "count": 1,
+        "example_ids": [
+            "45"
+        ]
+    },
+    {
+        "function_name": "addInitializedPropertyStatements",
+        "description": "This function adds statements for initializing properties to an array of statements. It is designed to work with TypeScript's AST manipulation.",
+        "tool_id": "javascript_0005",
+        "count": 1,
+        "example_ids": [
+            "37"
+        ]
+    },
+    {
+        "function_name": "areDeclarationFlagsIdentical",
+        "description": "This function compares two TypeScript declaration objects to determine if they have identical declaration flags, taking into account specific allowances for differences in optionality between parameters and variable declarations.",
+        "tool_id": "javascript_0006",
+        "count": 1,
+        "example_ids": [
+            "35"
+        ]
+    },
+    {
+        "function_name": "assignOwnDefaults",
+        "description": "This function determines the value to be assigned to a property in an object, preferring the object's own value if it exists and is not undefined, otherwise using a source value.",
+        "tool_id": "javascript_0007",
+        "count": 1,
+        "example_ids": [
+            "40"
+        ]
+    },
+    {
+        "function_name": "buttonAddClickHandler",
+        "description": "This function attaches a click event listener to a specified button element with options to control event flow and behavior.",
+        "tool_id": "javascript_0008",
+        "count": 1,
+        "example_ids": [
+            "20"
+        ]
+    },
+    {
+        "function_name": "calculateFinalVelocity",
+        "description": "This function calculates the final velocity of an object in free fall after a certain time, taking into account the acceleration due to gravity and the initial velocity.",
+        "tool_id": "javascript_0009",
+        "count": 1,
+        "example_ids": [
+            "18"
+        ]
+    },
+    {
+        "function_name": "chartDataAccessorFactory",
+        "description": "This function generates a data accessor for a specific chart component within a data visualization librar `. It provides the capability to fetch and update specific properties such as 'DataPoints' and 'Labels' of the chart through a configuration object.",
+        "tool_id": "javascript_0010",
+        "count": 1,
+        "example_ids": [
+            "14"
+        ]
+    },
+    {
+        "function_name": "configureShaderMaterial",
+        "description": "This function configures a ShaderMaterial for a Three.js scene, applying custom shaders, textures, and properties based on the provided data, texture list, and 3D object.",
+        "tool_id": "javascript_0011",
+        "count": 1,
+        "example_ids": [
+            "19"
+        ]
+    },
+    {
+        "function_name": "contentUpdater",
+        "description": "This function updates the inner content of a specified div element when the 'update' action is called.",
+        "tool_id": "javascript_0012",
+        "count": 1,
+        "example_ids": [
+            "26"
+        ]
+    },
+    {
+        "function_name": "convertEnumeratedValue",
+        "description": "This function converts a given key-value pair to a 'true' or 'false' string based on specific conditions. It specifically handles falsy values, the string 'false', and validates the 'contenteditable' attribute's value.",
+        "tool_id": "javascript_0013",
+        "count": 1,
+        "example_ids": [
+            "49"
+        ]
+    },
+    {
+        "function_name": "createAuthToken",
+        "description": "This function generates an authorization token with user details, validity, issuer, role, and encoding algorithm.",
+        "tool_id": "javascript_0014",
+        "count": 1,
+        "example_ids": [
+            "23"
+        ]
+    },
+    {
+        "function_name": "doesEmailInputExist",
+        "description": "This function verifies whether a given email form contains an input with a specific 'name' attribute value.",
+        "tool_id": "javascript_0015",
+        "count": 1,
+        "example_ids": [
+            "8"
+        ]
+    },
+    {
+        "function_name": "emailFormatValidator",
+        "description": "This function validates if a given email address adheres to the standard email format and can optionally check against specific domain criteria.",
+        "tool_id": "javascript_0016",
+        "count": 1,
+        "example_ids": [
+            "4"
+        ]
+    },
+    {
+        "function_name": "emitNewLineBeforeLeadingComments",
+        "description": "This function ensures that a new line is emitted before the leading comments of a specified node within a TypeScript file.",
+        "tool_id": "javascript_0017",
+        "count": 1,
+        "example_ids": [
+            "33"
+        ]
+    },
+    {
+        "function_name": "extractLastTransactionId",
+        "description": "This function scans a database log file for lines indicating transaction completion or failure, extracting the last transaction ID that matches the criteria. It uses a processing function `processFunction` to further handle the extracted transaction ID.",
+        "tool_id": "javascript_0018",
+        "count": 1,
+        "example_ids": [
+            "2"
+        ]
+    },
+    {
+        "function_name": "fetchSalesDepartmentRecords",
+        "description": "This function asynchronously fetches a collection of records from a specified database where the 'department' field matches a given criterion, using a custom query function.",
+        "tool_id": "javascript_0019",
+        "count": 1,
+        "example_ids": [
+            "10"
+        ]
+    },
+    {
+        "function_name": "filterBooksByAuthor",
+        "description": "This function filters through a collection of books within a library to find all books that are written by a specific author, returning a list of books that match the criteria.",
+        "tool_id": "javascript_0020",
+        "count": 1,
+        "example_ids": [
+            "28"
+        ]
+    },
+    {
+        "function_name": "findProductById",
+        "description": "This function iterates over a list of product objects to find a product with a matching 'productId'.",
+        "tool_id": "javascript_0021",
+        "count": 1,
+        "example_ids": [
+            "21"
+        ]
+    },
+    {
+        "function_name": "forEachType",
+        "description": "This function iterates over each type in a given type object, applying a specified function to it. If the type object represents a union of types, the function is applied to each type in the union; otherwise, it is applied directly to the single type.",
+        "tool_id": "javascript_0022",
+        "count": 1,
+        "example_ids": [
+            "34"
+        ]
+    },
+    {
+        "function_name": "generateNotificationHandler",
+        "description": "This function generates a notification handler for an application, which can filter incoming messages by priority level. It can also be linked to a specific messaging service and categorized under a certain notification type.",
+        "tool_id": "javascript_0023",
+        "count": 1,
+        "example_ids": [
+            "17"
+        ]
+    },
+    {
+        "function_name": "getActiveDataEntries",
+        "description": "This function extracts data entries from a list element based on a specified attribute and its value. It checks for the presence of the 'data-active' attribute and whether it is set to true.",
+        "tool_id": "javascript_0024",
+        "count": 1,
+        "example_ids": [
+            "1"
+        ]
+    },
+    {
+        "function_name": "getDirectoryToWatchFromFailedLookupLocationDirectory",
+        "description": "This function determines the most suitable directory to watch for file changes based on a given directory path, especially handling paths within 'node_modules' by selecting the top-most 'node_modules' directory or an ancestor directory.",
+        "tool_id": "javascript_0025",
+        "count": 1,
+        "example_ids": [
+            "38"
+        ]
+    },
+    {
+        "function_name": "getNextKeyValues",
+        "description": "This function extracts all key-value pairs in a JSON object that follow a specified key until it encounters a new nested object or array. It is intended for use within a specific data analysis context that keeps track of the current position within the JSON structure.",
+        "tool_id": "javascript_0026",
+        "count": 1,
+        "example_ids": [
+            "7"
+        ]
+    },
+    {
+        "function_name": "getUniqueSorted",
+        "description": "This function takes an array of elements and returns a new array of unique elements sorted in ascending order. It does not require any additional parameters for sorting.",
+        "tool_id": "javascript_0027",
+        "count": 1,
+        "example_ids": [
+            "24"
+        ]
+    },
+    {
+        "function_name": "invokeCallback",
+        "description": "This function invokes a callback with an error and a value. If the callback throws an error, it is caught and re-thrown asynchronously.",
+        "tool_id": "javascript_0028",
+        "count": 1,
+        "example_ids": [
+            "43"
+        ]
+    },
+    {
+        "function_name": "manageReactState",
+        "description": "This function encapsulates the logic for state management in a React application, offering solutions for shared state handling and performance optimization.",
+        "tool_id": "javascript_0029",
+        "count": 1,
+        "example_ids": [
+            "5"
+        ]
+    },
+    {
+        "function_name": "mapTransitions",
+        "description": "This function creates a mapping where each key is an element from a given array (up to a specified limit of elements) and each value is set to a predefined category. This is useful for defining categories for CSS transitions.",
+        "tool_id": "javascript_0030",
+        "count": 1,
+        "example_ids": [
+            "6"
+        ]
+    },
+    {
+        "function_name": "maybeAddJsSyntheticRestParameter",
+        "description": "This function checks a given function declaration to see if it should add a synthetic rest parameter based on the presence of a variadic type in the last parameter or in the JSDoc tags. It modifies the parameters array directly if necessary.",
+        "tool_id": "javascript_0031",
+        "count": 1,
+        "example_ids": [
+            "39"
+        ]
+    },
+    {
+        "function_name": "performDataFetch",
+        "description": "This function fetches data from a specified API endpoint using the provided request configuration, checks the response against an expected JSON object, and handles any potential errors. It supports various request methods like GET or POST.",
+        "tool_id": "javascript_0032",
+        "count": 1,
+        "example_ids": [
+            "12"
+        ]
+    },
+    {
+        "function_name": "pollQueue",
+        "description": "This function processes a queue of file watch objects at specified intervals, checking a chunk of files at a time for any modifications.",
+        "tool_id": "javascript_0033",
+        "count": 1,
+        "example_ids": [
+            "32"
+        ]
+    },
+    {
+        "function_name": "prioritizeAndSort",
+        "description": "This function sorts an array of objects based on their 'name' property, while prioritizing items based on a specified status.",
+        "tool_id": "javascript_0034",
+        "count": 1,
+        "example_ids": [
+            "11"
+        ]
+    },
+    {
+        "function_name": "queue_1",
+        "description": "This function creates a queue object with a specified worker function and concurrency level. It allows for tasks to be added to the queue and processed according to the concurrency level. Optional payload size can be specified to limit the number of tasks processed per worker call.",
+        "tool_id": "javascript_0035",
+        "count": 1,
+        "example_ids": [
+            "41"
+        ]
+    },
+    {
+        "function_name": "resetStateProperty",
+        "description": "This function resets a given state property to null. It is typically used in React components to clear state.",
+        "tool_id": "javascript_0036",
+        "count": 1,
+        "example_ids": [
+            "22"
+        ]
+    },
+    {
+        "function_name": "rotateVertices",
+        "description": "This function computes the updated coordinates of a set of vertices after rotating them around a pivot point by a given angle.",
+        "tool_id": "javascript_0037",
+        "count": 1,
+        "example_ids": [
+            "16"
+        ]
+    },
+    {
+        "function_name": "sTe",
+        "description": "This function calculates the difference between two dates in a specified time unit.",
+        "tool_id": "javascript_0038",
+        "count": 1,
+        "example_ids": [
+            "47"
+        ]
+    },
+    {
+        "function_name": "setText",
+        "description": "This function sets new text in an editor, starting from a specified position for a given length. If the length is not specified, it replaces text till the end.",
+        "tool_id": "javascript_0039",
+        "count": 1,
+        "example_ids": [
+            "30"
+        ]
+    },
+    {
+        "function_name": "skipThrough",
+        "description": "This function allows for a custom operation to be performed on a node during a tree traversal by executing a callback function with the node and a state object as arguments.",
+        "tool_id": "javascript_0040",
+        "count": 1,
+        "example_ids": [
+            "44"
+        ]
+    },
+    {
+        "function_name": "submitAtCoordinate",
+        "description": "This function sends a submit action to a React form element at a specific position determined by coordinates relative to its bounding box.",
+        "tool_id": "javascript_0041",
+        "count": 1,
+        "example_ids": [
+            "3"
+        ]
+    },
+    {
+        "function_name": "trackSubmitWithValidation",
+        "description": "This function tracks the 'submitForm' action on a given object. It only logs the submission when specific validation flags are set; if the flags are not set, the original action is performed without tracking.",
+        "tool_id": "javascript_0042",
+        "count": 1,
+        "example_ids": [
+            "25"
+        ]
+    },
+    {
+        "function_name": "transformAllDecoratorsOfDeclaration",
+        "description": "This function processes and transforms all decorators associated with a TypeScript declaration node. It combines transformed decorators and parameters decorators into a single array.",
+        "tool_id": "javascript_0043",
+        "count": 1,
+        "example_ids": [
+            "31"
+        ]
+    },
+    {
+        "function_name": "updateBreak",
+        "description": "This function updates the label of a break node within an abstract syntax tree. If the current label of the node does not match the provided label, it creates a new break node with the specified label and updates the original node.",
+        "tool_id": "javascript_0044",
+        "count": 1,
+        "example_ids": [
+            "36"
+        ]
+    },
+    {
+        "function_name": "updateDOMListeners",
+        "description": "This function updates the DOM event listeners from an old virtual node to a new one, ensuring that any changes in event listeners are properly handled and applied to the target element.",
+        "tool_id": "javascript_0045",
+        "count": 1,
+        "example_ids": [
+            "48"
+        ]
+    },
+    {
+        "function_name": "vOe",
+        "description": "This function updates a property of an object to a new value, but only if the new value is different from the existing one or if the property does not already exist on the object.",
+        "tool_id": "javascript_0046",
+        "count": 1,
+        "example_ids": [
+            "46"
+        ]
+    },
+    {
+        "function_name": "validateApiResponse",
+        "description": "This function analyzes a JSON payload to determine if it contains a specific key, indicating successful API response, and triggers the corresponding processing logic for that key.",
+        "tool_id": "javascript_0047",
+        "count": 1,
+        "example_ids": [
+            "9"
+        ]
+    },
+    {
+        "function_name": "validateReactProp",
+        "description": "This function validates an object to ensure it is safe to pass as a prop in a React component by checking that it is not a Promise and does not contain methods that could lead to side effects, raising a warning if the validation fails.",
+        "tool_id": "javascript_0048",
+        "count": 1,
+        "example_ids": [
+            "27"
+        ]
+    },
+    {
+        "function_name": "validateUserInput",
+        "description": "This function is called after a user has finished typing in a form field, to validate the input provided.",
+        "tool_id": "javascript_0049",
+        "count": 1,
+        "example_ids": [
+            "0"
+        ]
+    },
+    {
+        "function_name": "US_President_During_Event",
+        "description": "Returns the U.S. president during a specified historical event.",
+        "tool_id": "python_0000",
+        "count": 2,
+        "example_ids": [
+            "241",
+            "238"
+        ]
+    },
+    {
+        "function_name": "history_api.get_president_by_year",
+        "description": "Get the name of the U.S. President for a specified year.",
+        "tool_id": "python_0001",
+        "count": 2,
+        "example_ids": [
+            "239",
+            "240"
+        ]
+    },
+    {
+        "function_name": "get_air_quality_index",
+        "description": "Retrieve the air quality index at a specified location and time.",
+        "tool_id": "python_0002",
+        "count": 4,
+        "example_ids": [
+            "196",
+            "197",
+            "199",
+            "203"
+        ]
+    },
+    {
+        "function_name": "algebra.quadratic_roots",
+        "description": "Find the roots of a quadratic equation ax^2 + bx + c = 0.",
+        "tool_id": "python_0003",
+        "count": 1,
+        "example_ids": [
+            "3"
+        ]
+    },
+    {
+        "function_name": "analyze_dna_sequence",
+        "description": "Analyzes the DNA sequence based on a reference sequence and return any potential mutations.",
+        "tool_id": "python_0004",
+        "count": 1,
+        "example_ids": [
+            "62"
+        ]
+    },
+    {
+        "function_name": "analyze_structure",
+        "description": "Analyze a structure of a building based on its Id and floor numbers.",
+        "tool_id": "python_0005",
+        "count": 1,
+        "example_ids": [
+            "271"
+        ]
+    },
+    {
+        "function_name": "array_sort",
+        "description": "Sorts a given list in ascending or descending order.",
+        "tool_id": "python_0006",
+        "count": 1,
+        "example_ids": [
+            "87"
+        ]
+    },
+    {
+        "function_name": "average_batting_score",
+        "description": "Get the average batting score of a cricketer for specified past matches.",
+        "tool_id": "python_0007",
+        "count": 1,
+        "example_ids": [
+            "306"
+        ]
+    },
+    {
+        "function_name": "average_temperature",
+        "description": "Retrieves the average temperature for a specific location over the defined timeframe.",
+        "tool_id": "python_0008",
+        "count": 1,
+        "example_ids": [
+            "78"
+        ]
+    },
+    {
+        "function_name": "biology.get_cell_info",
+        "description": "Retrieve information about the structure and functioning of a specified type of cell",
+        "tool_id": "python_0009",
+        "count": 1,
+        "example_ids": [
+            "55"
+        ]
+    },
+    {
+        "function_name": "blackjack.check_winner",
+        "description": "Checks and determines the winner in a game of blackjack.",
+        "tool_id": "python_0010",
+        "count": 1,
+        "example_ids": [
+            "334"
+        ]
+    },
+    {
+        "function_name": "board_game.chess.get_top_players",
+        "description": "Find top chess players in a location based on rating.",
+        "tool_id": "python_0011",
+        "count": 1,
+        "example_ids": [
+            "331"
+        ]
+    },
+    {
+        "function_name": "board_game_info",
+        "description": "Get the information about a board game from a database.",
+        "tool_id": "python_0012",
+        "count": 2,
+        "example_ids": [
+            "330",
+            "328"
+        ]
+    },
+    {
+        "function_name": "book_hotel",
+        "description": "Book a room in a specific hotel with particular preferences ||| Book a room of specified type for a particular number of nights at a specific hotel, starting from a specified date.",
+        "tool_id": "python_0014",
+        "count": 3,
+        "example_ids": [
+            " 386",
+            "382",
+            "383"
+        ]
+    },
+    {
+        "function_name": "building.get_dimensions",
+        "description": "Retrieve the dimensions of a specific building based on its name.",
+        "tool_id": "python_0016",
+        "count": 1,
+        "example_ids": [
+            "270"
+        ]
+    },
+    {
+        "function_name": "calc_absolute_pressure",
+        "description": "Calculates the absolute pressure from gauge and atmospheric pressures.",
+        "tool_id": "python_0017",
+        "count": 1,
+        "example_ids": [
+            "49"
+        ]
+    },
+    {
+        "function_name": "calculate_triangle_area",
+        "description": "Calculate the area of a triangle given its base and height. ||| Calculate the area of a triangle using its base and height.",
+        "tool_id": "python_0018",
+        "count": 3,
+        "example_ids": [
+            "0",
+            "11",
+            "95"
+        ]
+    },
+    {
+        "function_name": "calc_binomial_prob",
+        "description": "Calculates the probability of an outcome based on the binomial distribution",
+        "tool_id": "python_0019",
+        "count": 3,
+        "example_ids": [
+            "114",
+            "115",
+            "121"
+        ]
+    },
+    {
+        "function_name": "calc_heat_capacity",
+        "description": "Calculate the heat capacity at constant pressure of air using its temperature and volume.",
+        "tool_id": "python_0020",
+        "count": 1,
+        "example_ids": [
+            "52"
+        ]
+    },
+    {
+        "function_name": "calculate_bmi",
+        "description": "Calculate the Body Mass Index (BMI) for a person based on their weight and height. ||| Calculate the Body Mass Index (BMI) of a person. ||| Calculate the Body Mass Index based on given weight and height.",
+        "tool_id": "python_0021",
+        "count": 4,
+        "example_ids": [
+            "107",
+            "84",
+            "88",
+            "222"
+        ]
+    },
+    {
+        "function_name": "calculate_NPV",
+        "description": "Calculate the NPV (Net Present Value) of an investment, considering a series of future cash flows, discount rate, and an initial investment.",
+        "tool_id": "python_0022",
+        "count": 1,
+        "example_ids": [
+            "127"
+        ]
+    },
+    {
+        "function_name": "calculate_area",
+        "description": "Calculate the area of a right-angled triangle given the lengths of its base and height.",
+        "tool_id": "python_0023",
+        "count": 1,
+        "example_ids": [
+            "10"
+        ]
+    },
+    {
+        "function_name": "calculate_average",
+        "description": "Calculates the average of a list of numbers.",
+        "tool_id": "python_0025",
+        "count": 1,
+        "example_ids": [
+            "82"
+        ]
+    },
+    {
+        "function_name": "calculate_bacteria_evolution_rate",
+        "description": "Calculate the evolution rate of bacteria given the starting number, duplication frequency and total duration.",
+        "tool_id": "python_0026",
+        "count": 1,
+        "example_ids": [
+            "74"
+        ]
+    },
+    {
+        "function_name": "calculate_batting_average",
+        "description": "Calculate the batting average for a baseball player based on their number of hits and at-bats.",
+        "tool_id": "python_0027",
+        "count": 1,
+        "example_ids": [
+            "302"
+        ]
+    },
+    {
+        "function_name": "calculate_cagr",
+        "description": "Calculate the Compound Annual Growth Rate (CAGR) given an initial investment value, a final investment value, and the number of years.",
+        "tool_id": "python_0030",
+        "count": 1,
+        "example_ids": [
+            "140"
+        ]
+    },
+    {
+        "function_name": "calculate_carbon_footprint",
+        "description": "Calculate the estimated carbon footprint of a lifestyle based on factors such as daily driving distance, weekly meat consumption, and yearly trash production.",
+        "tool_id": "python_0031",
+        "count": 1,
+        "example_ids": [
+            "195"
+        ]
+    },
+    {
+        "function_name": "calculate_cell_density",
+        "description": "Calculate the cell density of a biological sample based on its optical density and the experiment dilution.",
+        "tool_id": "python_0032",
+        "count": 1,
+        "example_ids": [
+            "57"
+        ]
+    },
+    {
+        "function_name": "calculate_circle_dimensions",
+        "description": "Calculate the area and circumference of a circle based on the radius.",
+        "tool_id": "python_0033",
+        "count": 3,
+        "example_ids": [
+            "272",
+            "7",
+            "12"
+        ]
+    },
+    {
+        "function_name": "calculate_clock_angle",
+        "description": "Calculate the angle between the hour and minute hands of a clock at a given time.",
+        "tool_id": "python_0035",
+        "count": 1,
+        "example_ids": [
+            "98"
+        ]
+    },
+    {
+        "function_name": "calculate_compounded_interest",
+        "description": "Calculate the compounded interest for a given initial deposit, interest rate, time and number of times the interest is compounded per unit time. ||| Calculate the compounded interest for a given principal, interest rate, and period.",
+        "tool_id": "python_0037",
+        "count": 4,
+        "example_ids": [
+            " 153",
+            "145",
+            " 131",
+            "269"
+        ]
+    },
+    {
+        "function_name": "calculate_cooking_time",
+        "description": "Calculate the cooking time for a roast chicken.",
+        "tool_id": "python_0038",
+        "count": 1,
+        "example_ids": [
+            "368"
+        ]
+    },
+    {
+        "function_name": "calculate_daily_water_intake",
+        "description": "Calculate the recommended daily water intake for a person based on their weight.",
+        "tool_id": "python_0039",
+        "count": 1,
+        "example_ids": [
+            "198"
+        ]
+    },
+    {
+        "function_name": "calculate_density",
+        "description": "Calculate the density of a substance based on its mass and volume. ||| Calculate the population density of a specific country in a specific year.",
+        "tool_id": "python_0040",
+        "count": 2,
+        "example_ids": [
+            " 48",
+            "65"
+        ]
+    },
+    {
+        "function_name": "calculate_derivative",
+        "description": "Calculate the derivative of a polynomial function.",
+        "tool_id": "python_0041",
+        "count": 2,
+        "example_ids": [
+            "14",
+            "16"
+        ]
+    },
+    {
+        "function_name": "calculate_discounted_cash_flow",
+        "description": "Calculate the discounted cash flow of a bond for a given annual coupon payment, time frame and discount rate.",
+        "tool_id": "python_0042",
+        "count": 1,
+        "example_ids": [
+            "129"
+        ]
+    },
+    {
+        "function_name": "calculate_displacement",
+        "description": "Calculates the displacement of an object in motion given initial velocity, time, and acceleration.",
+        "tool_id": "python_0043",
+        "count": 1,
+        "example_ids": [
+            "28"
+        ]
+    },
+    {
+        "function_name": "calculate_distance",
+        "description": "Calculate the distance between two GPS coordinates. ||| Calculate the distance between two celestial bodies.",
+        "tool_id": "python_0044",
+        "count": 2,
+        "example_ids": [
+            " 83",
+            "102"
+        ]
+    },
+    {
+        "function_name": "calculate_electric_field",
+        "description": "Calculate the electric field produced by a charge at a certain distance.",
+        "tool_id": "python_0045",
+        "count": 1,
+        "example_ids": [
+            "39"
+        ]
+    },
+    {
+        "function_name": "calculate_electric_field_strength",
+        "description": "Calculate the electric field strength at a certain distance from a point charge.",
+        "tool_id": "python_0046",
+        "count": 1,
+        "example_ids": [
+            "44"
+        ]
+    },
+    {
+        "function_name": "calculate_electrostatic_potential",
+        "description": "Calculate the electrostatic potential between two charged bodies using the principle of Coulomb's Law.",
+        "tool_id": "python_0047",
+        "count": 1,
+        "example_ids": [
+            "38"
+        ]
+    },
+    {
+        "function_name": "calculate_emission_savings",
+        "description": "Calculate potential greenhouse gas emissions saved by switching to renewable energy sources.",
+        "tool_id": "python_0048",
+        "count": 1,
+        "example_ids": [
+            "202"
+        ]
+    },
+    {
+        "function_name": "calculate_emissions",
+        "description": "Calculates the annual carbon dioxide emissions produced by a vehicle based on the distance traveled, the fuel type and the fuel efficiency of the vehicle.",
+        "tool_id": "python_0049",
+        "count": 1,
+        "example_ids": [
+            "200"
+        ]
+    },
+    {
+        "function_name": "calculate_entropy_change",
+        "description": "Calculate the entropy change for an isothermal and reversible process.",
+        "tool_id": "python_0050",
+        "count": 1,
+        "example_ids": [
+            "51"
+        ]
+    },
+    {
+        "function_name": "calculate_final_speed",
+        "description": "Calculate the final speed of an object dropped from a certain height without air resistance. ||| Calculate the final speed of an object in free fall after a certain time, neglecting air resistance. The acceleration due to gravity is considered as -9.81 m/s^2",
+        "tool_id": "python_0051",
+        "count": 2,
+        "example_ids": [
+            " 32",
+            "29"
+        ]
+    },
+    {
+        "function_name": "calculate_final_temperature",
+        "description": "Calculates the final equilibrium temperature after mixing two bodies with different masses and temperatures",
+        "tool_id": "python_0052",
+        "count": 1,
+        "example_ids": [
+            "46"
+        ]
+    },
+    {
+        "function_name": "final_velocity",
+        "description": "Calculate the final velocity of an object given its initial velocity, acceleration, and time.",
+        "tool_id": "python_0053",
+        "count": 4,
+        "example_ids": [
+            "25",
+            "27",
+            "31",
+            "30"
+        ]
+    },
+    {
+        "function_name": "calculate_fitness",
+        "description": "Calculate the expected evolutionary fitness of a creature based on the individual values and contributions of its traits.",
+        "tool_id": "python_0054",
+        "count": 1,
+        "example_ids": [
+            "72"
+        ]
+    },
+    {
+        "function_name": "calculate_future_value",
+        "description": "Calculate the future value of an investment given the initial amount, interest rate, and investment duration. ||| Calculates the future value of an investment based on the present value, interest rate, and time period.",
+        "tool_id": "python_0055",
+        "count": 6,
+        "example_ids": [
+            "155",
+            "154",
+            "138",
+            "148",
+            "133",
+            "137"
+        ]
+    },
+    {
+        "function_name": "calculate_genotype_frequency",
+        "description": "Calculate the frequency of homozygous dominant genotype based on the allele frequency using Hardy Weinberg Principle.",
+        "tool_id": "python_0056",
+        "count": 1,
+        "example_ids": [
+            "64"
+        ]
+    },
+    {
+        "function_name": "calculate_magnetic_field",
+        "description": "Calculate the magnetic field produced at the center of a circular loop carrying current.",
+        "tool_id": "python_0057",
+        "count": 1,
+        "example_ids": [
+            "40"
+        ]
+    },
+    {
+        "function_name": "calculate_magnetic_field_strength",
+        "description": "Calculate the magnetic field strength at a point a certain distance away from a long wire carrying a current.",
+        "tool_id": "python_0058",
+        "count": 1,
+        "example_ids": [
+            "43"
+        ]
+    },
+    {
+        "function_name": "calculate_molecular_weight",
+        "description": "Calculate the molecular weight of a compound given the compound formula.",
+        "tool_id": "python_0059",
+        "count": 1,
+        "example_ids": [
+            "59"
+        ]
+    },
+    {
+        "function_name": "calculate_mutual_fund_balance",
+        "description": "Calculate the final balance of a mutual fund investment based on the total initial investment, annual yield rate and the time period.",
+        "tool_id": "python_0060",
+        "count": 1,
+        "example_ids": [
+            "152"
+        ]
+    },
+    {
+        "function_name": "calculate_neuronal_activity",
+        "description": "Calculate the neuronal activity (rate of firing) based on a given input synaptic rate, weight of inputs, and decay rate. Higher input or weight increases firing rate and higher decay rate decreases it.",
+        "tool_id": "python_0061",
+        "count": 1,
+        "example_ids": [
+            "220"
+        ]
+    },
+    {
+        "function_name": "calculate_paint_needed",
+        "description": "Calculate the amount of paint needed to cover a surface area based on the coverage rate of a specific paint brand.",
+        "tool_id": "python_0062",
+        "count": 1,
+        "example_ids": [
+            "259"
+        ]
+    },
+    {
+        "function_name": "probabilities.calculate_single",
+        "description": "Calculate the probability of an event.",
+        "tool_id": "python_0063",
+        "count": 2,
+        "example_ids": [
+            "112",
+            "116"
+        ]
+    },
+    {
+        "function_name": "calculate_resonant_frequency",
+        "description": "Calculate the resonant frequency of an LC (inductor-capacitor) circuit.",
+        "tool_id": "python_0064",
+        "count": 1,
+        "example_ids": [
+            "42"
+        ]
+    },
+    {
+        "function_name": "calculate_return_on_equity",
+        "description": "Calculate a company's return on equity based on its net income, shareholder's equity, and dividends paid.",
+        "tool_id": "python_0065",
+        "count": 1,
+        "example_ids": [
+            "132"
+        ]
+    },
+    {
+        "function_name": "calculate_return_on_investment",
+        "description": "Calculate the return on investment for a given stock based on its purchase price, sale price, and any dividends received.",
+        "tool_id": "python_0066",
+        "count": 1,
+        "example_ids": [
+            "135"
+        ]
+    },
+    {
+        "function_name": "calculate_roi",
+        "description": "Calculate the return on investment for a given deposit amount, annual interest rate, and time frame.",
+        "tool_id": "python_0067",
+        "count": 1,
+        "example_ids": [
+            "150"
+        ]
+    },
+    {
+        "function_name": "get_shortest_driving_distance",
+        "description": "Calculate the shortest driving distance between two locations.",
+        "tool_id": "python_0068",
+        "count": 2,
+        "example_ids": [
+            "36",
+            "207"
+        ]
+    },
+    {
+        "function_name": "calculate_slope_gradient",
+        "description": "Calculate the slope gradient between two geographical coordinates.",
+        "tool_id": "python_0069",
+        "count": 1,
+        "example_ids": [
+            "192"
+        ]
+    },
+    {
+        "function_name": "calculate_speed",
+        "description": "Calculate the speed of an object based on the distance travelled and the time taken.",
+        "tool_id": "python_0070",
+        "count": 1,
+        "example_ids": [
+            "101"
+        ]
+    },
+    {
+        "function_name": "calculate_vehicle_emission",
+        "description": "Calculate the annual carbon emissions produced by a specific type of vehicle based on mileage.",
+        "tool_id": "python_0073",
+        "count": 1,
+        "example_ids": [
+            "70"
+        ]
+    },
+    {
+        "function_name": "calculate_velocity",
+        "description": "Calculate the velocity for a certain distance travelled within a specific duration.",
+        "tool_id": "python_0074",
+        "count": 1,
+        "example_ids": [
+            "26"
+        ]
+    },
+    {
+        "function_name": "card_game_probability.calculate",
+        "description": "Calculate the probability of drawing a certain card or suit from a deck of cards.",
+        "tool_id": "python_0076",
+        "count": 1,
+        "example_ids": [
+            "338"
+        ]
+    },
+    {
+        "function_name": "card_games.poker_determine_winner",
+        "description": "Determines the winner in a game of Poker based on the cards in each players' hands.",
+        "tool_id": "python_0077",
+        "count": 1,
+        "example_ids": [
+            "340"
+        ]
+    },
+    {
+        "function_name": "cards.shuffle_and_draw",
+        "description": "Shuffle a standard deck of 52 cards and draw a specified number of cards from the top.",
+        "tool_id": "python_0078",
+        "count": 1,
+        "example_ids": [
+            "336"
+        ]
+    },
+    {
+        "function_name": "celebrity_net_worth.get",
+        "description": "Get the total net worth of a sports celebrity based on most recent data.",
+        "tool_id": "python_0079",
+        "count": 1,
+        "example_ids": [
+            "313"
+        ]
+    },
+    {
+        "function_name": "cell_biology.function_lookup",
+        "description": "Look up the function of a given molecule in a specified organelle.",
+        "tool_id": "python_0080",
+        "count": 1,
+        "example_ids": [
+            "58"
+        ]
+    },
+    {
+        "function_name": "cellbio.get_proteins",
+        "description": "Get the list of proteins in a specific cell compartment.",
+        "tool_id": "python_0081",
+        "count": 1,
+        "example_ids": [
+            "56"
+        ]
+    },
+    {
+        "function_name": "chess.rating",
+        "description": "Fetches the current chess rating of a given player",
+        "tool_id": "python_0082",
+        "count": 1,
+        "example_ids": [
+            "332"
+        ]
+    },
+    {
+        "function_name": "chi_squared_test",
+        "description": "Performs a Chi-Squared test for independence on a 2x2 contingency table.",
+        "tool_id": "python_0083",
+        "count": 1,
+        "example_ids": [
+            "122"
+        ]
+    },
+    {
+        "function_name": "city_distance.find_shortest",
+        "description": "Calculates the shortest distance between two cities via available public transportation.",
+        "tool_id": "python_0084",
+        "count": 1,
+        "example_ids": [
+            "86"
+        ]
+    },
+    {
+        "function_name": "civil_cases.retrieve",
+        "description": "Retrieve civil cases based on given parameters, including year, crime type, and location.",
+        "tool_id": "python_0085",
+        "count": 1,
+        "example_ids": [
+            "165"
+        ]
+    },
+    {
+        "function_name": "compose_melody",
+        "description": "Compose a melody using the specified chord progression for a certain number of measures on specified instrument.",
+        "tool_id": "python_0086",
+        "count": 1,
+        "example_ids": [
+            "292"
+        ]
+    },
+    {
+        "function_name": "compound_interest",
+        "description": "Calculate compound interest for a certain time period.",
+        "tool_id": "python_0087",
+        "count": 1,
+        "example_ids": [
+            "136"
+        ]
+    },
+    {
+        "function_name": "concert.find_nearby",
+        "description": "Locate nearby concerts based on specific criteria like genre.",
+        "tool_id": "python_0089",
+        "count": 1,
+        "example_ids": [
+            "289"
+        ]
+    },
+    {
+        "function_name": "concert.get_details",
+        "description": "Fetch the details for a particular concert based on the artist and location.",
+        "tool_id": "python_0090",
+        "count": 1,
+        "example_ids": [
+            "286"
+        ]
+    },
+    {
+        "function_name": "concert_booking.book_ticket",
+        "description": "Book concert tickets for a specific artist in a specified city.",
+        "tool_id": "python_0092",
+        "count": 1,
+        "example_ids": [
+            "288"
+        ]
+    },
+    {
+        "function_name": "concert_info.get",
+        "description": "Retrieve information about concerts based on specific genre, location and date.",
+        "tool_id": "python_0093",
+        "count": 3,
+        "example_ids": [
+            "284",
+            "287",
+            "290"
+        ]
+    },
+    {
+        "function_name": "cooking_conversion.convert",
+        "description": "Convert cooking measurements from one unit to another.",
+        "tool_id": "python_0095",
+        "count": 1,
+        "example_ids": [
+            "365"
+        ]
+    },
+    {
+        "function_name": "get_case_info",
+        "description": "Retrieve case details using a specific case docket number and court location.",
+        "tool_id": "python_0096",
+        "count": 3,
+        "example_ids": [
+            "160",
+            "169",
+            "171"
+        ]
+    },
+    {
+        "function_name": "create_histogram",
+        "description": "Create a histogram based on provided data.",
+        "tool_id": "python_0097",
+        "count": 1,
+        "example_ids": [
+            "79"
+        ]
+    },
+    {
+        "function_name": "create_player_profile",
+        "description": "Create a new player profile with character name, class and starting level.",
+        "tool_id": "python_0098",
+        "count": 1,
+        "example_ids": [
+            "348"
+        ]
+    },
+    {
+        "function_name": "crime_record.get_record",
+        "description": "Retrieve detailed felony crime records using a specific case number and location.",
+        "tool_id": "python_0099",
+        "count": 1,
+        "example_ids": [
+            "156"
+        ]
+    },
+    {
+        "function_name": "crime_statute_lookup",
+        "description": "Look up the criminal statutes in a specific jurisdiction to find possible punishments for a specific crime.",
+        "tool_id": "python_0100",
+        "count": 1,
+        "example_ids": [
+            "161"
+        ]
+    },
+    {
+        "function_name": "criminal_history.check_felonies",
+        "description": "This function checks if an individual has any prior felony convictions based on their full name and birth date.",
+        "tool_id": "python_0101",
+        "count": 1,
+        "example_ids": [
+            "157"
+        ]
+    },
+    {
+        "function_name": "currency_exchange.convert",
+        "description": "Convert an amount from a base currency to a target currency based on the current exchange rate.",
+        "tool_id": "python_0103",
+        "count": 4,
+        "example_ids": [
+            "388",
+            "389",
+            "390",
+            "393"
+        ]
+    },
+    {
+        "function_name": "database.query",
+        "description": "Query the database based on certain conditions.",
+        "tool_id": "python_0106",
+        "count": 1,
+        "example_ids": [
+            "96"
+        ]
+    },
+    {
+        "function_name": "db_fetch_records",
+        "description": "Fetch records from a specified database table based on certain conditions.",
+        "tool_id": "python_0107",
+        "count": 1,
+        "example_ids": [
+            "89"
+        ]
+    },
+    {
+        "function_name": "deck_of_cards.odds",
+        "description": "Compute the probability of drawing a specific suit from a given deck of cards.",
+        "tool_id": "python_0108",
+        "count": 1,
+        "example_ids": [
+            "341"
+        ]
+    },
+    {
+        "function_name": "detailed_weather_forecast",
+        "description": "Retrieve a detailed weather forecast for a specific location and duration including optional precipitation details. ||| Retrieve a detailed weather forecast for a specific location and time frame, including high/low temperatures, humidity, and precipitation.",
+        "tool_id": "python_0109",
+        "count": 4,
+        "example_ids": [
+            "185",
+            "186",
+            "189",
+            "333"
+        ]
+    },
+    {
+        "function_name": "diabetes_prediction",
+        "description": "Predict the likelihood of diabetes type 2 based on a person's weight and height.",
+        "tool_id": "python_0110",
+        "count": 1,
+        "example_ids": [
+            "61"
+        ]
+    },
+    {
+        "function_name": "discoverer.get",
+        "description": "Retrieve the name of the discoverer of an element based on its name.",
+        "tool_id": "python_0111",
+        "count": 1,
+        "example_ids": [
+            "245"
+        ]
+    },
+    {
+        "function_name": "distance_calculator.calculate",
+        "description": "Calculate the distance between two locations, considering terrain.",
+        "tool_id": "python_0112",
+        "count": 1,
+        "example_ids": [
+            "397"
+        ]
+    },
+    {
+        "function_name": "draw_rectangle",
+        "description": "Draw a rectangle given its width and height.",
+        "tool_id": "python_0113",
+        "count": 1,
+        "example_ids": [
+            "261"
+        ]
+    },
+    {
+        "function_name": "ecology.get_turtle_population",
+        "description": "Get the population and species of turtles in a specific location.",
+        "tool_id": "python_0114",
+        "count": 1,
+        "example_ids": [
+            "69"
+        ]
+    },
+    {
+        "function_name": "ecology_data.precipitation_stats",
+        "description": "Retrieve precipitation data for a specified location and time period.",
+        "tool_id": "python_0115",
+        "count": 1,
+        "example_ids": [
+            "66"
+        ]
+    },
+    {
+        "function_name": "electromagnetic_force",
+        "description": "Calculate the electromagnetic force between two charges placed at a certain distance.",
+        "tool_id": "python_0116",
+        "count": 1,
+        "example_ids": [
+            "41"
+        ]
+    },
+    {
+        "function_name": "elephant_population_estimate",
+        "description": "Estimate future population of elephants given current population and growth rate.",
+        "tool_id": "python_0117",
+        "count": 1,
+        "example_ids": [
+            "75"
+        ]
+    },
+    {
+        "function_name": "employee.fetch_data",
+        "description": "Fetches the detailed data for a specific employee in a given company.",
+        "tool_id": "python_0118",
+        "count": 1,
+        "example_ids": [
+            "90"
+        ]
+    },
+    {
+        "function_name": "entropy_change.calculate",
+        "description": "Calculate the change in entropy for a mass of a specific substance under set initial and final conditions.",
+        "tool_id": "python_0119",
+        "count": 1,
+        "example_ids": [
+            "50"
+        ]
+    },
+    {
+        "function_name": "estimate_mutual_fund_return",
+        "description": "Calculate the estimated return on a mutual fund given the yearly yield, the investment amount and the time period.",
+        "tool_id": "python_0121",
+        "count": 1,
+        "example_ids": [
+            "139"
+        ]
+    },
+    {
+        "function_name": "estimate_population",
+        "description": "Estimate the population of a particular species in a given country.",
+        "tool_id": "python_0122",
+        "count": 1,
+        "example_ids": [
+            "201"
+        ]
+    },
+    {
+        "function_name": "european_history.get_event_date",
+        "description": "Retrieve the date of a specific event in European history.",
+        "tool_id": "python_0123",
+        "count": 1,
+        "example_ids": [
+            "233"
+        ]
+    },
+    {
+        "function_name": "event_finder.find_upcoming",
+        "description": "Find upcoming events of a specific genre in a given location.",
+        "tool_id": "python_0124",
+        "count": 1,
+        "example_ids": [
+            "214"
+        ]
+    },
+    {
+        "function_name": "fMRI.analyze",
+        "description": "This function takes in fMRI data to output analyzed data.",
+        "tool_id": "python_0125",
+        "count": 1,
+        "example_ids": [
+            "217"
+        ]
+    },
+    {
+        "function_name": "fetch_DNA_sequence",
+        "description": "Retrieve the sequence of a DNA molecule with the given id from a public database.",
+        "tool_id": "python_0126",
+        "count": 1,
+        "example_ids": [
+            "53"
+        ]
+    },
+    {
+        "function_name": "finance.calculate_quarterly_dividend_per_share",
+        "description": "Calculate quarterly dividend per share for a company given total dividend payout and outstanding shares",
+        "tool_id": "python_0130",
+        "count": 1,
+        "example_ids": [
+            "128"
+        ]
+    },
+    {
+        "function_name": "finance_calculator.npv",
+        "description": "Calculate the Net Present Value (NPV) for a series of cash flows discounted at a certain interest rate.",
+        "tool_id": "python_0132",
+        "count": 1,
+        "example_ids": [
+            "130"
+        ]
+    },
+    {
+        "function_name": "find_card_in_deck",
+        "description": "Locate a particular card in a deck based on rank and suit.",
+        "tool_id": "python_0133",
+        "count": 1,
+        "example_ids": [
+            "335"
+        ]
+    },
+    {
+        "function_name": "find_concert",
+        "description": "Locate a concert in a specified location within a certain budget.",
+        "tool_id": "python_0134",
+        "count": 1,
+        "example_ids": [
+            "285"
+        ]
+    },
+    {
+        "function_name": "find_exhibition",
+        "description": "Locate the most popular exhibitions based on criteria like location, time, art form, and user ratings.",
+        "tool_id": "python_0135",
+        "count": 1,
+        "example_ids": [
+            "267"
+        ]
+    },
+    {
+        "function_name": "find_flute",
+        "description": "Locate a flute for sale based on specific requirements.",
+        "tool_id": "python_0136",
+        "count": 1,
+        "example_ids": [
+            "282"
+        ]
+    },
+    {
+        "function_name": "find_instrument",
+        "description": "Search for a musical instrument within specified budget and of specific type.",
+        "tool_id": "python_0137",
+        "count": 1,
+        "example_ids": [
+            "280"
+        ]
+    },
+    {
+        "function_name": "find_latest_court_case",
+        "description": "Find the latest court case between two companies.",
+        "tool_id": "python_0138",
+        "count": 1,
+        "example_ids": [
+            "179"
+        ]
+    },
+    {
+        "function_name": "find_recipe",
+        "description": "Find a recipe based on the dietary restrictions, recipe type, and time constraints. ||| Locate a recipe based on name and its calorie content",
+        "tool_id": "python_0139",
+        "count": 2,
+        "example_ids": [
+            " 367",
+            "360"
+        ]
+    },
+    {
+        "function_name": "find_recipes",
+        "description": "Find recipes based on dietary restrictions, meal type, and preferred ingredients.",
+        "tool_id": "python_0140",
+        "count": 1,
+        "example_ids": [
+            "353"
+        ]
+    },
+    {
+        "function_name": "find_restaurant",
+        "description": "Locate nearby restaurants based on user defined criteria",
+        "tool_id": "python_0141",
+        "count": 1,
+        "example_ids": [
+            "364"
+        ]
+    },
+    {
+        "function_name": "find_restaurants",
+        "description": "Locate nearby restaurants based on location and food preferences.",
+        "tool_id": "python_0142",
+        "count": 1,
+        "example_ids": [
+            "80"
+        ]
+    },
+    {
+        "function_name": "flight.book",
+        "description": "Book a direct flight for a specific date and time from departure location to destination location.",
+        "tool_id": "python_0143",
+        "count": 1,
+        "example_ids": [
+            "213"
+        ]
+    },
+    {
+        "function_name": "forest_growth_forecast",
+        "description": "Predicts the forest growth over the next N years based on current trends.",
+        "tool_id": "python_0144",
+        "count": 1,
+        "example_ids": [
+            "68"
+        ]
+    },
+    {
+        "function_name": "game_list.get_games",
+        "description": "Get a list of video games based on release year, multiplayer functionality and ESRB rating",
+        "tool_id": "python_0145",
+        "count": 1,
+        "example_ids": [
+            "342"
+        ]
+    },
+    {
+        "function_name": "game_result.get_winner",
+        "description": "Get the winner of a specific basketball game.",
+        "tool_id": "python_0146",
+        "count": 1,
+        "example_ids": [
+            "307"
+        ]
+    },
+    {
+        "function_name": "game_score.highest",
+        "description": "Retrieve the highest score achieved by any player in a specific game.",
+        "tool_id": "python_0147",
+        "count": 1,
+        "example_ids": [
+            "349"
+        ]
+    },
+    {
+        "function_name": "game_stats.fetch_player_statistics",
+        "description": "Fetch player statistics for a specific video game for a given user.",
+        "tool_id": "python_0148",
+        "count": 1,
+        "example_ids": [
+            "343"
+        ]
+    },
+    {
+        "function_name": "game_valuation",
+        "description": "Get the current market value of a vintage video game.",
+        "tool_id": "python_0149",
+        "count": 1,
+        "example_ids": [
+            "345"
+        ]
+    },
+    {
+        "function_name": "gamespot.getAverageUserScore",
+        "description": "Retrieve the average user score of a game from GameSpot.",
+        "tool_id": "python_0150",
+        "count": 1,
+        "example_ids": [
+            "352"
+        ]
+    },
+    {
+        "function_name": "generate_DNA_sequence",
+        "description": "Generate a random DNA sequence with a specific length and nucleotide preference.",
+        "tool_id": "python_0151",
+        "count": 1,
+        "example_ids": [
+            "71"
+        ]
+    },
+    {
+        "function_name": "generate_circle_image",
+        "description": "Generates a circle image based on the given radius and color",
+        "tool_id": "python_0152",
+        "count": 1,
+        "example_ids": [
+            "256"
+        ]
+    },
+    {
+        "function_name": "generate_law_contract",
+        "description": "Generates a customized law contract given involved parties, contract type and location.",
+        "tool_id": "python_0153",
+        "count": 1,
+        "example_ids": [
+            "162"
+        ]
+    },
+    {
+        "function_name": "genetics.calculate_similarity",
+        "description": "Calculates the genetic similarity between two species based on their DNA sequences.",
+        "tool_id": "python_0154",
+        "count": 1,
+        "example_ids": [
+            "63"
+        ]
+    },
+    {
+        "function_name": "geo_distance.calculate",
+        "description": "Calculate the geographic distance between two given locations.",
+        "tool_id": "python_0155",
+        "count": 1,
+        "example_ids": [
+            "85"
+        ]
+    },
+    {
+        "function_name": "geometry.calculate_area_circle",
+        "description": "Calculate the area of a circle given its radius.",
+        "tool_id": "python_0156",
+        "count": 2,
+        "example_ids": [
+            "8",
+            "9"
+        ]
+    },
+    {
+        "function_name": "geometry.area_triangle",
+        "description": "Calculate the area of a triangle.",
+        "tool_id": "python_0157",
+        "count": 1,
+        "example_ids": [
+            "104"
+        ]
+    },
+    {
+        "function_name": "get_act_details",
+        "description": "Retrieve the details of a particular legal act based on its name and year of amendment if any.",
+        "tool_id": "python_0160",
+        "count": 1,
+        "example_ids": [
+            "159"
+        ]
+    },
+    {
+        "function_name": "get_best_sushi_places",
+        "description": "Returns the best sushi places given the city, review_rate and top number.",
+        "tool_id": "python_0163",
+        "count": 1,
+        "example_ids": [
+            "362"
+        ]
+    },
+    {
+        "function_name": "get_bigfive_scores",
+        "description": "Retrieve Big Five Personality trait scores based on individual's behavioural characteristics.",
+        "tool_id": "python_0164",
+        "count": 1,
+        "example_ids": [
+            "229"
+        ]
+    },
+    {
+        "function_name": "get_boiling_melting_points",
+        "description": "Retrieve the boiling point and melting point of a substance based on its name and the sea level.",
+        "tool_id": "python_0165",
+        "count": 1,
+        "example_ids": [
+            "47"
+        ]
+    },
+    {
+        "function_name": "get_career_stats",
+        "description": "Retrieve the career statistics of a basketball player based on the player's name.",
+        "tool_id": "python_0166",
+        "count": 1,
+        "example_ids": [
+            "310"
+        ]
+    },
+    {
+        "function_name": "get_collectables_in_season",
+        "description": "Retrieve a list of collectable items in a specific game during a specified season.",
+        "tool_id": "python_0168",
+        "count": 1,
+        "example_ids": [
+            "346"
+        ]
+    },
+    {
+        "function_name": "get_crime_rate",
+        "description": "Retrieve the official crime rate of a city.",
+        "tool_id": "python_0169",
+        "count": 1,
+        "example_ids": [
+            "164"
+        ]
+    },
+    {
+        "function_name": "get_criminal_records",
+        "description": "Retrieve the criminal records of a specific person in a specific area during a certain time period.",
+        "tool_id": "python_0170",
+        "count": 1,
+        "example_ids": [
+            "158"
+        ]
+    },
+    {
+        "function_name": "get_current_time",
+        "description": "Retrieve the current time for a specified city and country. ||| Retrieve the current time in a specific time zone.",
+        "tool_id": "python_0171",
+        "count": 2,
+        "example_ids": [
+            " 377",
+            "379"
+        ]
+    },
+    {
+        "function_name": "get_current_weather",
+        "description": "Retrieves the current temperature and humidity for a specific location.",
+        "tool_id": "python_0172",
+        "count": 1,
+        "example_ids": [
+            "187"
+        ]
+    },
+    {
+        "function_name": "get_defense_ranking",
+        "description": "Retrieve the defence ranking of NBA teams in a specified season.",
+        "tool_id": "python_0173",
+        "count": 1,
+        "example_ids": [
+            "315"
+        ]
+    },
+    {
+        "function_name": "get_directions",
+        "description": "Retrieve directions from one location to another.",
+        "tool_id": "python_0174",
+        "count": 1,
+        "example_ids": [
+            "33"
+        ]
+    },
+    {
+        "function_name": "get_discoverer",
+        "description": "Get the person or team who made a particular scientific discovery",
+        "tool_id": "python_0175",
+        "count": 1,
+        "example_ids": [
+            "243"
+        ]
+    },
+    {
+        "function_name": "get_earliest_reference",
+        "description": "Retrieve the earliest historical reference of a person.",
+        "tool_id": "python_0176",
+        "count": 1,
+        "example_ids": [
+            "251"
+        ]
+    },
+    {
+        "function_name": "get_event_date",
+        "description": "Retrieve the date of a historical event.",
+        "tool_id": "python_0177",
+        "count": 1,
+        "example_ids": [
+            "235"
+        ]
+    },
+    {
+        "function_name": "get_exchange_rate_with_fee",
+        "description": "Retrieve the exchange rate between two currencies including transaction fee.",
+        "tool_id": "python_0178",
+        "count": 1,
+        "example_ids": [
+            "391"
+        ]
+    },
+    {
+        "function_name": "get_game_item_stats",
+        "description": "Retrieve the statistics of a specific item in a specific video game.",
+        "tool_id": "python_0179",
+        "count": 1,
+        "example_ids": [
+            "344"
+        ]
+    },
+    {
+        "function_name": "get_highest_scoring_player",
+        "description": "Retrieve the highest scoring player in a specific game and season.",
+        "tool_id": "python_0180",
+        "count": 1,
+        "example_ids": [
+            "350"
+        ]
+    },
+    {
+        "function_name": "get_historical_GDP",
+        "description": "Retrieve historical GDP data for a specific country and time range.",
+        "tool_id": "python_0181",
+        "count": 1,
+        "example_ids": [
+            "237"
+        ]
+    },
+    {
+        "function_name": "get_instrument_details",
+        "description": "Retrieve the average price and ratings of an instrument from a particular manufacturer.",
+        "tool_id": "python_0182",
+        "count": 1,
+        "example_ids": [
+            "278"
+        ]
+    },
+    {
+        "function_name": "get_instrument_info",
+        "description": "Retrieve the details about a specific musical instrument based on its name, maker, and manufacturing year.",
+        "tool_id": "python_0183",
+        "count": 1,
+        "example_ids": [
+            "281"
+        ]
+    },
+    {
+        "function_name": "get_lawsuit_cases",
+        "description": "Retrieve all lawsuit cases related to a specific company during a particular year.",
+        "tool_id": "python_0184",
+        "count": 1,
+        "example_ids": [
+            "177"
+        ]
+    },
+    {
+        "function_name": "get_lawsuit_details",
+        "description": "Retrieve details of a lawsuit based on its case number and court location. ||| Retrieve the detailed information about a lawsuit based on its case number and the court location.",
+        "tool_id": "python_0185",
+        "count": 2,
+        "example_ids": [
+            " 181",
+            "178"
+        ]
+    },
+    {
+        "function_name": "get_metal_price",
+        "description": "Retrieve the current price for a specified metal and measure.",
+        "tool_id": "python_0186",
+        "count": 1,
+        "example_ids": [
+            "141"
+        ]
+    },
+    {
+        "function_name": "get_neuron_coordinates",
+        "description": "Retrieve the coordinates of the specified neuron in the rat's brain.",
+        "tool_id": "python_0188",
+        "count": 1,
+        "example_ids": [
+            "219"
+        ]
+    },
+    {
+        "function_name": "get_news",
+        "description": "Fetches the latest news on a specific topic.",
+        "tool_id": "python_0189",
+        "count": 1,
+        "example_ids": [
+            "210"
+        ]
+    },
+    {
+        "function_name": "get_personality_traits",
+        "description": "Retrieve the common personality traits of people based on their hobbies or activities. ||| Retrieve the personality traits for a specific personality type, including their strengths and weaknesses.",
+        "tool_id": "python_0190",
+        "count": 2,
+        "example_ids": [
+            " 228",
+            "227"
+        ]
+    },
+    {
+        "function_name": "get_plants_for_slope",
+        "description": "Retrieve the list of plants suitable for slope based on erosion control ability.",
+        "tool_id": "python_0191",
+        "count": 1,
+        "example_ids": [
+            "194"
+        ]
+    },
+    {
+        "function_name": "get_protein_sequence",
+        "description": "Retrieve the protein sequence encoded by a human gene.",
+        "tool_id": "python_0193",
+        "count": 1,
+        "example_ids": [
+            "54"
+        ]
+    },
+    {
+        "function_name": "get_recipe",
+        "description": "Fetch the recipe for a specific dish along with preparation steps.",
+        "tool_id": "python_0194",
+        "count": 1,
+        "example_ids": [
+            "357"
+        ]
+    },
+    {
+        "function_name": "get_religion_history",
+        "description": "Retrieves historic events and facts related to a specified religion for a given period. ||| Retrieves significant religious events, including the details of the event, its historical context, and its impacts.",
+        "tool_id": "python_0195",
+        "count": 2,
+        "example_ids": [
+            " 254",
+            "252"
+        ]
+    },
+    {
+        "function_name": "get_restaurant",
+        "description": "Retrieve highest rated restaurant given cuisine, location, and a condition.",
+        "tool_id": "python_0196",
+        "count": 1,
+        "example_ids": [
+            "91"
+        ]
+    },
+    {
+        "function_name": "get_scientist_for_discovery",
+        "description": "Retrieve the scientist's name who is credited for a specific scientific discovery or theory.",
+        "tool_id": "python_0197",
+        "count": 1,
+        "example_ids": [
+            "242"
+        ]
+    },
+    {
+        "function_name": "get_sculpture_info",
+        "description": "Retrieves the most recent artwork by a specified artist with its detailed description.",
+        "tool_id": "python_0198",
+        "count": 1,
+        "example_ids": [
+            "263"
+        ]
+    },
+    {
+        "function_name": "get_sculpture_value",
+        "description": "Retrieve the current market value of a particular sculpture by a specific artist.",
+        "tool_id": "python_0199",
+        "count": 1,
+        "example_ids": [
+            "266"
+        ]
+    },
+    {
+        "function_name": "get_song_lyrics",
+        "description": "Retrieve the lyrics of a song based on the artist's name and song title.",
+        "tool_id": "python_0201",
+        "count": 1,
+        "example_ids": [
+            "295"
+        ]
+    },
+    {
+        "function_name": "get_sport_ranking",
+        "description": "Retrieve the current world ranking of a sportsperson based on the sport and player's name.",
+        "tool_id": "python_0202",
+        "count": 1,
+        "example_ids": [
+            "316"
+        ]
+    },
+    {
+        "function_name": "get_stock_info",
+        "description": "Retrieves information about a specific stock based on company's name.",
+        "tool_id": "python_0203",
+        "count": 1,
+        "example_ids": [
+            "212"
+        ]
+    },
+    {
+        "function_name": "get_stock_price",
+        "description": "Get the closing stock price for a specific company on a specified date. ||| Retrieve the stock price for a specific company and time frame. ||| Retrieves the current stock price of the specified companies",
+        "tool_id": "python_0204",
+        "count": 3,
+        "example_ids": [
+            "142",
+            "143",
+            "149"
+        ]
+    },
+    {
+        "function_name": "get_stock_prices",
+        "description": "Retrieves stock prices for specified companies and duration.",
+        "tool_id": "python_0205",
+        "count": 2,
+        "example_ids": [
+            "146",
+            "147"
+        ]
+    },
+    {
+        "function_name": "sports_ranking",
+        "description": "Fetch the ranking of a specific sports team in a specific league ||| Get the ranking of a team in a given sports league and season.",
+        "tool_id": "python_0206",
+        "count": 6,
+        "example_ids": [
+            "317",
+            "318",
+            "319",
+            "320",
+            "321",
+            "322"
+        ]
+    },
+    {
+        "function_name": "get_team_score",
+        "description": "Retrieves the latest game score, individual player stats, and team stats for a specified sports team.",
+        "tool_id": "python_0208",
+        "count": 1,
+        "example_ids": [
+            "326"
+        ]
+    },
+    {
+        "function_name": "get_theater_movie_releases",
+        "description": "Retrieve the list of movie releases in specific theaters for a specified period. in the format of city shorten name like SF.",
+        "tool_id": "python_0209",
+        "count": 1,
+        "example_ids": [
+            "93"
+        ]
+    },
+    {
+        "function_name": "get_third_chord",
+        "description": "Calculate the third major chord in a given key.",
+        "tool_id": "python_0210",
+        "count": 1,
+        "example_ids": [
+            "301"
+        ]
+    },
+    {
+        "function_name": "get_time_difference",
+        "description": "Get the time difference between two places.",
+        "tool_id": "python_0211",
+        "count": 1,
+        "example_ids": [
+            "250"
+        ]
+    },
+    {
+        "function_name": "get_top_cases",
+        "description": "Retrieve a list of the most influential or landmark cases in a specific field of law.",
+        "tool_id": "python_0212",
+        "count": 1,
+        "example_ids": [
+            "174"
+        ]
+    },
+    {
+        "function_name": "get_traffic_info",
+        "description": "Retrieve current traffic conditions for a specified route.",
+        "tool_id": "python_0213",
+        "count": 1,
+        "example_ids": [
+            "205"
+        ]
+    },
+    {
+        "function_name": "get_vegan_recipe",
+        "description": "Retrieve a vegan soup recipe based on the provided cooking time.",
+        "tool_id": "python_0214",
+        "count": 1,
+        "example_ids": [
+            "354"
+        ]
+    },
+    {
+        "function_name": "get_zodiac_compatibility",
+        "description": "Retrieve the compatibility score between two Zodiac signs.",
+        "tool_id": "python_0215",
+        "count": 1,
+        "example_ids": [
+            "226"
+        ]
+    },
+    {
+        "function_name": "grocery_info.nutritional_info",
+        "description": "Retrieve nutritional information for a given food item from a particular store",
+        "tool_id": "python_0216",
+        "count": 1,
+        "example_ids": [
+            "374"
+        ]
+    },
+    {
+        "function_name": "grocery_store.find_nearby",
+        "description": "Locate nearby grocery stores based on specific criteria like organic fruits and vegetables.",
+        "tool_id": "python_0217",
+        "count": 1,
+        "example_ids": [
+            "369"
+        ]
+    },
+    {
+        "function_name": "group_dynamics.pattern",
+        "description": "Examine the social dynamics and interactions within a group based on the personality traits and group size.",
+        "tool_id": "python_0218",
+        "count": 1,
+        "example_ids": [
+            "223"
+        ]
+    },
+    {
+        "function_name": "guitar_price.find",
+        "description": "Retrieve the price of a specific used guitar model based on its condition and location.",
+        "tool_id": "python_0219",
+        "count": 1,
+        "example_ids": [
+            "283"
+        ]
+    },
+    {
+        "function_name": "highest_grossing_banks",
+        "description": "Retrieve the highest grossing banks in a specified country and year.",
+        "tool_id": "python_0220",
+        "count": 1,
+        "example_ids": [
+            "151"
+        ]
+    },
+    {
+        "function_name": "hilton_hotel.check_availability",
+        "description": "Check hotel availability for a specific location and time frame.",
+        "tool_id": "python_0221",
+        "count": 1,
+        "example_ids": [
+            "381"
+        ]
+    },
+    {
+        "function_name": "historic_leader_search",
+        "description": "Retrieve information about a historical leader given a location and date.",
+        "tool_id": "python_0222",
+        "count": 1,
+        "example_ids": [
+            "230"
+        ]
+    },
+    {
+        "function_name": "historical_contrib.get_contrib",
+        "description": "Retrieve historical contribution made by a scientist on a specific date.",
+        "tool_id": "python_0223",
+        "count": 1,
+        "example_ids": [
+            "247"
+        ]
+    },
+    {
+        "function_name": "history.get_key_events",
+        "description": "Retrieve key historical events within a specific period for a certain country.",
+        "tool_id": "python_0224",
+        "count": 1,
+        "example_ids": [
+            "231"
+        ]
+    },
+    {
+        "function_name": "history_eu.fetch_events",
+        "description": "Fetches significant historical events within a specific time period in European history.",
+        "tool_id": "python_0226",
+        "count": 1,
+        "example_ids": [
+            "234"
+        ]
+    },
+    {
+        "function_name": "hospital.locate",
+        "description": "Locate nearby hospitals based on location and radius. Options to include specific departments are available.",
+        "tool_id": "python_0227",
+        "count": 1,
+        "example_ids": [
+            "396"
+        ]
+    },
+    {
+        "function_name": "hotel_booking",
+        "description": "Books a hotel room for a specific date range. ||| Books a hotel room given the location, room type, stay duration and any additional preferences.",
+        "tool_id": "python_0228",
+        "count": 2,
+        "example_ids": [
+            " 387",
+            "380"
+        ]
+    },
+    {
+        "function_name": "hotel_booking.book",
+        "description": "Book a hotel room given the city, date, and the number of adults and children.",
+        "tool_id": "python_0229",
+        "count": 1,
+        "example_ids": [
+            "384"
+        ]
+    },
+    {
+        "function_name": "hotel_bookings.book_room",
+        "description": "Book a hotel room based on specific criteria like location, room type, and check-in and check-out dates.",
+        "tool_id": "python_0230",
+        "count": 1,
+        "example_ids": [
+            "385"
+        ]
+    },
+    {
+        "function_name": "hypothesis_testing.two_sample_t_test",
+        "description": "Perform a two-sample t-test to determine if there is a significant difference between the means of two independent samples.",
+        "tool_id": "python_0232",
+        "count": 5,
+        "example_ids": [
+            "118",
+            "119",
+            "120",
+            "123",
+            "124"
+        ]
+    },
+    {
+        "function_name": "identify_bird",
+        "description": "Identify a bird species based on certain characteristics.",
+        "tool_id": "python_0233",
+        "count": 1,
+        "example_ids": [
+            "67"
+        ]
+    },
+    {
+        "function_name": "identify_color_rgb",
+        "description": "This function identifies the RGB values of a named color.",
+        "tool_id": "python_0234",
+        "count": 1,
+        "example_ids": [
+            "257"
+        ]
+    },
+    {
+        "function_name": "imdb.find_movies_by_actor",
+        "description": "Searches the database to find all movies by a specific actor within a certain year.",
+        "tool_id": "python_0235",
+        "count": 1,
+        "example_ids": [
+            "92"
+        ]
+    },
+    {
+        "function_name": "instrument_price.get",
+        "description": "Retrieve the current retail price of a specific musical instrument.",
+        "tool_id": "python_0236",
+        "count": 1,
+        "example_ids": [
+            "279"
+        ]
+    },
+    {
+        "function_name": "investment.predictProfit",
+        "description": "Predict the profit for given investment after specified number of years.",
+        "tool_id": "python_0238",
+        "count": 1,
+        "example_ids": [
+            "134"
+        ]
+    },
+    {
+        "function_name": "latest_exchange_rate",
+        "description": "Retrieve the latest exchange rate between two specified currencies.",
+        "tool_id": "python_0240",
+        "count": 1,
+        "example_ids": [
+            "392"
+        ]
+    },
+    {
+        "function_name": "law.civil.get_case_details",
+        "description": "Retrieve the details of a Supreme Court case given its title.",
+        "tool_id": "python_0241",
+        "count": 1,
+        "example_ids": [
+            "167"
+        ]
+    },
+    {
+        "function_name": "law_case_search",
+        "description": "Search and retrieve law cases based on the topic, timeline, and location.",
+        "tool_id": "python_0242",
+        "count": 1,
+        "example_ids": [
+            "173"
+        ]
+    },
+    {
+        "function_name": "law_case_search.find_historical",
+        "description": "Search for a historical law case based on specific criteria like the subject and year.",
+        "tool_id": "python_0243",
+        "count": 1,
+        "example_ids": [
+            "170"
+        ]
+    },
+    {
+        "function_name": "lawsuit.check_case",
+        "description": "Verify the details of a lawsuit case and check its status using case ID.",
+        "tool_id": "python_0244",
+        "count": 1,
+        "example_ids": [
+            "184"
+        ]
+    },
+    {
+        "function_name": "lawsuit_details.find",
+        "description": "Find details of lawsuits involving a specific company from a given year.",
+        "tool_id": "python_0245",
+        "count": 1,
+        "example_ids": [
+            "176"
+        ]
+    },
+    {
+        "function_name": "lawsuit_info",
+        "description": "Retrieves details of a lawsuit given a case number",
+        "tool_id": "python_0246",
+        "count": 1,
+        "example_ids": [
+            "182"
+        ]
+    },
+    {
+        "function_name": "lawsuit_search",
+        "description": "Retrieve all lawsuits involving a particular entity from specified jurisdiction. ||| Search for lawsuits related to a specific company within a specific date range and location.",
+        "tool_id": "python_0247",
+        "count": 2,
+        "example_ids": [
+            " 183",
+            "168"
+        ]
+    },
+    {
+        "function_name": "lawsuits_search",
+        "description": "Search for lawsuits against a specific company within a specific time and location.",
+        "tool_id": "python_0248",
+        "count": 1,
+        "example_ids": [
+            "180"
+        ]
+    },
+    {
+        "function_name": "lawyer.find_nearby",
+        "description": "Locate nearby lawyers based on specific criteria like specialty, fee per hour and city.",
+        "tool_id": "python_0249",
+        "count": 1,
+        "example_ids": [
+            "166"
+        ]
+    },
+    {
+        "function_name": "lawyer.get_experience",
+        "description": "Retrieve months of experience of a Lawyer on handling certain type of law cases.",
+        "tool_id": "python_0250",
+        "count": 1,
+        "example_ids": [
+            "175"
+        ]
+    },
+    {
+        "function_name": "legal_case.fetch",
+        "description": "Fetch detailed legal case information from database.",
+        "tool_id": "python_0251",
+        "count": 1,
+        "example_ids": [
+            "172"
+        ]
+    },
+    {
+        "function_name": "light_travel_time",
+        "description": "Calculate the time taken for light to travel from a celestial body to another.",
+        "tool_id": "python_0252",
+        "count": 1,
+        "example_ids": [
+            "100"
+        ]
+    },
+    {
+        "function_name": "linear_regression.get_r_squared",
+        "description": "Calculate the coefficient of determination of a regression model.",
+        "tool_id": "python_0253",
+        "count": 1,
+        "example_ids": [
+            "126"
+        ]
+    },
+    {
+        "function_name": "local_nursery.find",
+        "description": "Locate local nurseries based on location and plant types availability.",
+        "tool_id": "python_0254",
+        "count": 1,
+        "example_ids": [
+            "193"
+        ]
+    },
+    {
+        "function_name": "locate_tallest_mountains",
+        "description": "Find the tallest mountains within a specified radius of a location.",
+        "tool_id": "python_0255",
+        "count": 1,
+        "example_ids": [
+            "191"
+        ]
+    },
+    {
+        "function_name": "map_routing.fastest_route",
+        "description": "Finds the fastest route from one location to another, with an option to avoid toll roads.",
+        "tool_id": "python_0256",
+        "count": 1,
+        "example_ids": [
+            "81"
+        ]
+    },
+    {
+        "function_name": "map_service.get_directions",
+        "description": "Retrieve directions from a starting location to an ending location, including options for route preferences.",
+        "tool_id": "python_0257",
+        "count": 1,
+        "example_ids": [
+            "208"
+        ]
+    },
+    {
+        "function_name": "maps.get_distance_duration",
+        "description": "Retrieve the travel distance and estimated travel time from one location to another via car",
+        "tool_id": "python_0258",
+        "count": 1,
+        "example_ids": [
+            "394"
+        ]
+    },
+    {
+        "function_name": "market_performance.get_data",
+        "description": "Retrieve the market performance data for specified indexes over a specified time period.",
+        "tool_id": "python_0259",
+        "count": 1,
+        "example_ids": [
+            "144"
+        ]
+    },
+    {
+        "function_name": "math.factorial",
+        "description": "Calculate the factorial of a given number.",
+        "tool_id": "python_0260",
+        "count": 2,
+        "example_ids": [
+            " 1",
+            "97"
+        ]
+    },
+    {
+        "function_name": "number_theory.gcd",
+        "description": "Compute the greatest common divisor of two given integers.",
+        "tool_id": "python_0261",
+        "count": 5,
+        "example_ids": [
+            "20",
+            "21",
+            "22",
+            "24",
+            "19"
+        ]
+    },
+    {
+        "function_name": "math.hypot",
+        "description": "Calculate the Euclidean norm, sqrt(sum(squares)), the length of the vector from the origin to point (x, y) which is the hypotenuse of the right triangle.",
+        "tool_id": "python_0263",
+        "count": 1,
+        "example_ids": [
+            "2"
+        ]
+    },
+    {
+        "function_name": "math.power",
+        "description": "Calculate the power of one number raised to another.",
+        "tool_id": "python_0264",
+        "count": 1,
+        "example_ids": [
+            "105"
+        ]
+    },
+    {
+        "function_name": "mathematics.calculate_area_under_curve",
+        "description": "Calculate the area under the curve for a given polynomial function within a specified interval.",
+        "tool_id": "python_0265",
+        "count": 3,
+        "example_ids": [
+            "13",
+            "15",
+            "103"
+        ]
+    },
+    {
+        "function_name": "metropolitan_museum.get_top_artworks",
+        "description": "Fetches the list of popular artworks at the Metropolitan Museum of Art. Results can be sorted based on popularity.",
+        "tool_id": "python_0266",
+        "count": 1,
+        "example_ids": [
+            "275"
+        ]
+    },
+    {
+        "function_name": "mix_paint_color",
+        "description": "Combine two primary paint colors and adjust the resulting color's lightness level.",
+        "tool_id": "python_0267",
+        "count": 1,
+        "example_ids": [
+            "258"
+        ]
+    },
+    {
+        "function_name": "modify_painting",
+        "description": "Modify an existing painting's attributes such as size, medium, and color.",
+        "tool_id": "python_0268",
+        "count": 1,
+        "example_ids": [
+            "262"
+        ]
+    },
+    {
+        "function_name": "monarch.getMonarchOfYear",
+        "description": "Retrieve the monarch of a specific location during a specified year.",
+        "tool_id": "python_0269",
+        "count": 1,
+        "example_ids": [
+            "232"
+        ]
+    },
+    {
+        "function_name": "monopoly_odds_calculator",
+        "description": "Calculates the probability of rolling a certain sum with two dice, commonly used in board game like Monopoly.",
+        "tool_id": "python_0270",
+        "count": 1,
+        "example_ids": [
+            "329"
+        ]
+    },
+    {
+        "function_name": "movie_details.brief",
+        "description": "This function retrieves a brief about a specified movie.",
+        "tool_id": "python_0271",
+        "count": 1,
+        "example_ids": [
+            "215"
+        ]
+    },
+    {
+        "function_name": "multiplayer_game_finder",
+        "description": "Locate multiplayer games that match specific criteria such as rating, platform compatibility, genre, etc.",
+        "tool_id": "python_0272",
+        "count": 1,
+        "example_ids": [
+            "351"
+        ]
+    },
+    {
+        "function_name": "museum_info",
+        "description": "Get information about a museum including its opening hours and ticket prices for a specific date range. ||| Retrieve information about the opening hours of a museum based on its name.",
+        "tool_id": "python_0274",
+        "count": 5,
+        "example_ids": [
+            "277",
+            "274",
+            "273",
+            "276",
+            "398"
+        ]
+    },
+    {
+        "function_name": "music.calculate_note_duration",
+        "description": "Calculate the duration between two notes based on their frequencies and harmonic rhythm.",
+        "tool_id": "python_0276",
+        "count": 1,
+        "example_ids": [
+            "300"
+        ]
+    },
+    {
+        "function_name": "music.theory.chordProgression",
+        "description": "Identifies a potential key signature for the given chord progression.",
+        "tool_id": "python_0277",
+        "count": 1,
+        "example_ids": [
+            "297"
+        ]
+    },
+    {
+        "function_name": "music_composer.create_mix",
+        "description": "Create a mix of a song based on a particular music scale and duration",
+        "tool_id": "python_0278",
+        "count": 1,
+        "example_ids": [
+            "293"
+        ]
+    },
+    {
+        "function_name": "music_generation.create_chord_progression",
+        "description": "Create a chord progression in a specific key and number of chords.",
+        "tool_id": "python_0279",
+        "count": 1,
+        "example_ids": [
+            "294"
+        ]
+    },
+    {
+        "function_name": "music_generator.generate_melody",
+        "description": "Generate a melody based on certain musical parameters.",
+        "tool_id": "python_0280",
+        "count": 1,
+        "example_ids": [
+            "291"
+        ]
+    },
+    {
+        "function_name": "music_generator.generate_scale_progression",
+        "description": "Generate a music scale progression in a specific key with a given tempo and duration.",
+        "tool_id": "python_0281",
+        "count": 1,
+        "example_ids": [
+            "296"
+        ]
+    },
+    {
+        "function_name": "music_theory.key_signature",
+        "description": "Return the key signature of a major or minor scale.",
+        "tool_id": "python_0282",
+        "count": 1,
+        "example_ids": [
+            "298"
+        ]
+    },
+    {
+        "function_name": "musical_scale",
+        "description": "Get the musical scale of a specific key in music theory.",
+        "tool_id": "python_0283",
+        "count": 1,
+        "example_ids": [
+            "299"
+        ]
+    },
+    {
+        "function_name": "mutation_type.find",
+        "description": "Finds the type of a genetic mutation based on its SNP (Single Nucleotide Polymorphism) ID.",
+        "tool_id": "python_0284",
+        "count": 1,
+        "example_ids": [
+            "60"
+        ]
+    },
+    {
+        "function_name": "nfl_data.player_record",
+        "description": "Retrieve the record of an NFL player in a specified season.",
+        "tool_id": "python_0285",
+        "count": 1,
+        "example_ids": [
+            "309"
+        ]
+    },
+    {
+        "function_name": "number_analysis.prime_factors",
+        "description": "Compute the prime factors of a number.",
+        "tool_id": "python_0286",
+        "count": 2,
+        "example_ids": [
+            "17",
+            "18"
+        ]
+    },
+    {
+        "function_name": "paint_requirement.calculate",
+        "description": "Calculate the amount of paint required to paint a given area. Account for coverage efficiency of the paint and exclusions (like windows).",
+        "tool_id": "python_0288",
+        "count": 1,
+        "example_ids": [
+            "260"
+        ]
+    },
+    {
+        "function_name": "park_information",
+        "description": "Retrieve the basic information such as elevation and area of a national park.",
+        "tool_id": "python_0289",
+        "count": 1,
+        "example_ids": [
+            "190"
+        ]
+    },
+    {
+        "function_name": "parking_lot.find_nearest",
+        "description": "Locate the nearest parking lot based on a specific location and radius.",
+        "tool_id": "python_0290",
+        "count": 1,
+        "example_ids": [
+            "395"
+        ]
+    },
+    {
+        "function_name": "parks.find_nearby",
+        "description": "Locate nearby parks based on specific criteria like tennis court availability.",
+        "tool_id": "python_0291",
+        "count": 1,
+        "example_ids": [
+            "206"
+        ]
+    },
+    {
+        "function_name": "patient.get_mri_report",
+        "description": "Fetch the brain MRI report of the patient for a given status.",
+        "tool_id": "python_0292",
+        "count": 1,
+        "example_ids": [
+            "218"
+        ]
+    },
+    {
+        "function_name": "player_statistic",
+        "description": "Retrieves detailed player's statistics for a specific year.",
+        "tool_id": "python_0293",
+        "count": 1,
+        "example_ids": [
+            "312"
+        ]
+    },
+    {
+        "function_name": "player_stats.getLastGame",
+        "description": "Get last game statistics for a specific player in basketball",
+        "tool_id": "python_0294",
+        "count": 1,
+        "example_ids": [
+            "304"
+        ]
+    },
+    {
+        "function_name": "plot_sine_wave",
+        "description": "Plot a sine wave for a given frequency in a given range.",
+        "tool_id": "python_0295",
+        "count": 1,
+        "example_ids": [
+            "99"
+        ]
+    },
+    {
+        "function_name": "poker_game_winner",
+        "description": "Identify the winner in a poker game based on the cards.",
+        "tool_id": "python_0296",
+        "count": 1,
+        "example_ids": [
+            "337"
+        ]
+    },
+    {
+        "function_name": "poker_probability.full_house",
+        "description": "Calculate the probability of getting a full house in a poker game.",
+        "tool_id": "python_0297",
+        "count": 1,
+        "example_ids": [
+            "339"
+        ]
+    },
+    {
+        "function_name": "population_growth_estimate",
+        "description": "Estimate the future population growth of a specific location over a specified time period.",
+        "tool_id": "python_0298",
+        "count": 1,
+        "example_ids": [
+            "221"
+        ]
+    },
+    {
+        "function_name": "population_projections",
+        "description": "Calculates the projected population growth based on the current growth rate.",
+        "tool_id": "python_0299",
+        "count": 1,
+        "example_ids": [
+            "73"
+        ]
+    },
+    {
+        "function_name": "predict_house_price",
+        "description": "Predict house price based on area, number of rooms and year of construction. ||| Predict the price of a house in a given area based on number of bedrooms, bathrooms and area.",
+        "tool_id": "python_0301",
+        "count": 2,
+        "example_ids": [
+            " 125",
+            "110"
+        ]
+    },
+    {
+        "function_name": "prediction.evolution",
+        "description": "Predict the evolutionary rate for a specific species for a given timeframe.",
+        "tool_id": "python_0302",
+        "count": 1,
+        "example_ids": [
+            "76"
+        ]
+    },
+    {
+        "function_name": "prime_factorize",
+        "description": "Calculate the prime factorization of a given integer.",
+        "tool_id": "python_0303",
+        "count": 1,
+        "example_ids": [
+            "23"
+        ]
+    },
+    {
+        "function_name": "probability.dice_roll",
+        "description": "Calculate the probability of rolling a certain number on a six-sided die a certain number of times in a row.",
+        "tool_id": "python_0306",
+        "count": 1,
+        "example_ids": [
+            "113"
+        ]
+    },
+    {
+        "function_name": "probability_of_event",
+        "description": "Calculates the probability of an event.",
+        "tool_id": "python_0307",
+        "count": 1,
+        "example_ids": [
+            "117"
+        ]
+    },
+    {
+        "function_name": "property_records.get",
+        "description": "Fetch property records based on location, parcel number and county.",
+        "tool_id": "python_0308",
+        "count": 1,
+        "example_ids": [
+            "163"
+        ]
+    },
+    {
+        "function_name": "psych_research.get_preference",
+        "description": "Gathers research data on public preference between two options, based on societal category.",
+        "tool_id": "python_0309",
+        "count": 1,
+        "example_ids": [
+            "225"
+        ]
+    },
+    {
+        "function_name": "public_library.find_nearby",
+        "description": "Locate nearby public libraries based on specific criteria like English fiction availability and Wi-Fi.",
+        "tool_id": "python_0310",
+        "count": 1,
+        "example_ids": [
+            "209"
+        ]
+    },
+    {
+        "function_name": "publication_year.find",
+        "description": "Fetches the year a particular scientific work was published.",
+        "tool_id": "python_0311",
+        "count": 1,
+        "example_ids": [
+            "244"
+        ]
+    },
+    {
+        "function_name": "random.normalvariate",
+        "description": "Generates a random number from a normal distribution given the mean and standard deviation.",
+        "tool_id": "python_0312",
+        "count": 1,
+        "example_ids": [
+            "111"
+        ]
+    },
+    {
+        "function_name": "random_forest.train",
+        "description": "Train a Random Forest Model on given data",
+        "tool_id": "python_0313",
+        "count": 2,
+        "example_ids": [
+            "106",
+            "109"
+        ]
+    },
+    {
+        "function_name": "recipe.unit_conversion",
+        "description": "Convert a value from one kitchen unit to another for cooking purposes.",
+        "tool_id": "python_0314",
+        "count": 1,
+        "example_ids": [
+            "366"
+        ]
+    },
+    {
+        "function_name": "recipe_finder.find",
+        "description": "Find a recipe based on dietary preferences, number of servings, and preparation time.",
+        "tool_id": "python_0315",
+        "count": 1,
+        "example_ids": [
+            "356"
+        ]
+    },
+    {
+        "function_name": "recipe_info.get_calories",
+        "description": "Retrieve the amount of calories from a specific recipe in a food website.",
+        "tool_id": "python_0316",
+        "count": 1,
+        "example_ids": [
+            "355"
+        ]
+    },
+    {
+        "function_name": "recipe_search",
+        "description": "Search for a cooking recipe based on specific dietary needs and time constraint. ||| Search for a recipe given dietary restriction, ingredients, and number of servings.",
+        "tool_id": "python_0317",
+        "count": 2,
+        "example_ids": [
+            " 358",
+            "359"
+        ]
+    },
+    {
+        "function_name": "religion.history_info",
+        "description": "Provides comprehensive historical details about a specified religion till a specified century.",
+        "tool_id": "python_0318",
+        "count": 1,
+        "example_ids": [
+            "249"
+        ]
+    },
+    {
+        "function_name": "religious_history.get_papal_biography",
+        "description": "Retrieve the biography and main religious and historical contributions of a Pope based on his papal name.",
+        "tool_id": "python_0319",
+        "count": 1,
+        "example_ids": [
+            "255"
+        ]
+    },
+    {
+        "function_name": "restaurant.find_nearby",
+        "description": "Locate nearby restaurants based on specific criteria like cuisine type. ||| Locate nearby restaurants based on specific dietary preferences.",
+        "tool_id": "python_0320",
+        "count": 2,
+        "example_ids": [
+            " 204",
+            "77"
+        ]
+    },
+    {
+        "function_name": "restaurant_finder",
+        "description": "Locate restaurants based on certain criteria such as cuisine, city, and dietary preferences.",
+        "tool_id": "python_0321",
+        "count": 1,
+        "example_ids": [
+            "361"
+        ]
+    },
+    {
+        "function_name": "restaurant_search",
+        "description": "Locates top rated restaurants based on specific criteria such as type of cuisine, ratings, and facilities.",
+        "tool_id": "python_0322",
+        "count": 1,
+        "example_ids": [
+            "399"
+        ]
+    },
+    {
+        "function_name": "restaurant_search.find_closest",
+        "description": "Locate the closest sushi restaurant based on certain criteria, such as the presence of a patio.",
+        "tool_id": "python_0323",
+        "count": 1,
+        "example_ids": [
+            "363"
+        ]
+    },
+    {
+        "function_name": "retrieve_religion_info",
+        "description": "Retrieve the history and main beliefs of a religion.",
+        "tool_id": "python_0324",
+        "count": 1,
+        "example_ids": [
+            "253"
+        ]
+    },
+    {
+        "function_name": "route.estimate_time",
+        "description": "Estimate the travel time for a specific route with optional stops.",
+        "tool_id": "python_0325",
+        "count": 1,
+        "example_ids": [
+            "37"
+        ]
+    },
+    {
+        "function_name": "run_linear_regression",
+        "description": "Build a linear regression model using given predictor variables and a target variable.",
+        "tool_id": "python_0326",
+        "count": 1,
+        "example_ids": [
+            "108"
+        ]
+    },
+    {
+        "function_name": "safeway.order",
+        "description": "Order specified items from a Safeway location.",
+        "tool_id": "python_0328",
+        "count": 1,
+        "example_ids": [
+            "370"
+        ]
+    },
+    {
+        "function_name": "science_history.get_discovery_details",
+        "description": "Retrieve the details of a scientific discovery based on the discovery name.",
+        "tool_id": "python_0329",
+        "count": 1,
+        "example_ids": [
+            "246"
+        ]
+    },
+    {
+        "function_name": "science_history.get_invention",
+        "description": "Retrieve the inventor and year of invention based on the invention's name.",
+        "tool_id": "python_0330",
+        "count": 1,
+        "example_ids": [
+            "248"
+        ]
+    },
+    {
+        "function_name": "sculpture.get_details",
+        "description": "Retrieve details of a sculpture based on the artist and the title of the sculpture.",
+        "tool_id": "python_0331",
+        "count": 1,
+        "example_ids": [
+            "264"
+        ]
+    },
+    {
+        "function_name": "sculpture_locator.find_by_artist",
+        "description": "Locate the sculptures of specific artist by material and location",
+        "tool_id": "python_0332",
+        "count": 1,
+        "example_ids": [
+            "268"
+        ]
+    },
+    {
+        "function_name": "sculpture_search",
+        "description": "Find sculptures based on location and a specific time frame.",
+        "tool_id": "python_0333",
+        "count": 1,
+        "example_ids": [
+            "265"
+        ]
+    },
+    {
+        "function_name": "send_email",
+        "description": "Send an email to the specified email address.",
+        "tool_id": "python_0334",
+        "count": 1,
+        "example_ids": [
+            "211"
+        ]
+    },
+    {
+        "function_name": "sentiment_analysis",
+        "description": "Perform sentiment analysis on a given piece of text.",
+        "tool_id": "python_0335",
+        "count": 1,
+        "example_ids": [
+            "216"
+        ]
+    },
+    {
+        "function_name": "soccer.get_last_match",
+        "description": "Retrieve the details of the last match played by a specified soccer club.",
+        "tool_id": "python_0336",
+        "count": 1,
+        "example_ids": [
+            "347"
+        ]
+    },
+    {
+        "function_name": "soccer_stat.get_player_stats",
+        "description": "Retrieve soccer player statistics for a given season.",
+        "tool_id": "python_0337",
+        "count": 1,
+        "example_ids": [
+            "303"
+        ]
+    },
+    {
+        "function_name": "social_media_analytics.most_followed",
+        "description": "Find the most followed Twitter user related to certain topics.",
+        "tool_id": "python_0338",
+        "count": 1,
+        "example_ids": [
+            "224"
+        ]
+    },
+    {
+        "function_name": "solve_quadratic",
+        "description": "Find the roots of a quadratic equation. Returns both roots. ||| Solve a quadratic equation given coefficients a, b, and c. If optional 'root_type' is 'real', the function will only return real roots. If not specified, function may return complex roots.",
+        "tool_id": "python_0339",
+        "count": 3,
+        "example_ids": [
+            " 6",
+            "5",
+            "4"
+        ]
+    },
+    {
+        "function_name": "sports.match_results",
+        "description": "Returns the results of a given match between two teams.",
+        "tool_id": "python_0341",
+        "count": 1,
+        "example_ids": [
+            "325"
+        ]
+    },
+    {
+        "function_name": "sports_celebrity.get_major_achievements",
+        "description": "Returns a list of major achievements of a particular sports celebrity.",
+        "tool_id": "python_0343",
+        "count": 1,
+        "example_ids": [
+            "314"
+        ]
+    },
+    {
+        "function_name": "sports_db.find_athlete",
+        "description": "Find the profile information of a sports athlete based on their full name.",
+        "tool_id": "python_0344",
+        "count": 1,
+        "example_ids": [
+            "311"
+        ]
+    },
+    {
+        "function_name": "sports_ranking.get_top_player",
+        "description": "Get the top player in a specific sport.",
+        "tool_id": "python_0348",
+        "count": 1,
+        "example_ids": [
+            "323"
+        ]
+    },
+    {
+        "function_name": "sports_stats.get_performance",
+        "description": "Compute the performance score of a soccer player given his game stats for a specific tournament in a season.",
+        "tool_id": "python_0349",
+        "count": 1,
+        "example_ids": [
+            "305"
+        ]
+    },
+    {
+        "function_name": "sports_team.get_schedule",
+        "description": "Fetches the schedule of the specified sports team for the specified number of games in the given league.",
+        "tool_id": "python_0350",
+        "count": 2,
+        "example_ids": [
+            "308",
+            "327"
+        ]
+    },
+    {
+        "function_name": "team_score.get_latest",
+        "description": "Retrieve the score of the most recent game for a specified sports team.",
+        "tool_id": "python_0354",
+        "count": 1,
+        "example_ids": [
+            "324"
+        ]
+    },
+    {
+        "function_name": "thermo.calculate_energy",
+        "description": "Calculate the energy required or released during a phase change using mass, the phase transition temperature and the specific latent heat.",
+        "tool_id": "python_0355",
+        "count": 1,
+        "example_ids": [
+            "45"
+        ]
+    },
+    {
+        "function_name": "time_zone_converter",
+        "description": "Retrieve the current time of a specific city.",
+        "tool_id": "python_0356",
+        "count": 1,
+        "example_ids": [
+            "376"
+        ]
+    },
+    {
+        "function_name": "timezone.convert",
+        "description": "Convert time from one time zone to another.",
+        "tool_id": "python_0357",
+        "count": 1,
+        "example_ids": [
+            "378"
+        ]
+    },
+    {
+        "function_name": "travel_itinerary_generator",
+        "description": "Generate a travel itinerary based on specific destination, duration and daily budget, with preferred exploration type.",
+        "tool_id": "python_0359",
+        "count": 1,
+        "example_ids": [
+            "34"
+        ]
+    },
+    {
+        "function_name": "update_user_info",
+        "description": "Update user information in the database.",
+        "tool_id": "python_0360",
+        "count": 1,
+        "example_ids": [
+            "94"
+        ]
+    },
+    {
+        "function_name": "us_history.get_event_info",
+        "description": "Retrieve detailed information about a significant event in U.S. history.",
+        "tool_id": "python_0361",
+        "count": 1,
+        "example_ids": [
+            "236"
+        ]
+    },
+    {
+        "function_name": "vegan_restaurant.find_nearby",
+        "description": "Locate nearby vegan restaurants based on specific criteria like operating hours.",
+        "tool_id": "python_0363",
+        "count": 1,
+        "example_ids": [
+            "35"
+        ]
+    },
+    {
+        "function_name": "walmart.check_price",
+        "description": "Calculate total price for given items and their quantities at Walmart.",
+        "tool_id": "python_0364",
+        "count": 1,
+        "example_ids": [
+            "375"
+        ]
+    },
+    {
+        "function_name": "walmart.purchase",
+        "description": "Retrieve information of items from Walmart including stock availability.",
+        "tool_id": "python_0365",
+        "count": 1,
+        "example_ids": [
+            "373"
+        ]
+    },
+    {
+        "function_name": "weather.humidity_forecast",
+        "description": "Retrieve a humidity forecast for a specific location and time frame.",
+        "tool_id": "python_0366",
+        "count": 1,
+        "example_ids": [
+            "188"
+        ]
+    },
+    {
+        "function_name": "whole_foods.check_price",
+        "description": "Check the price of items at a specific Whole Foods location.",
+        "tool_id": "python_0368",
+        "count": 1,
+        "example_ids": [
+            "371"
+        ]
+    },
+    {
+        "function_name": "whole_foods.find_top_brands",
+        "description": "Get top brands based on a specific product from Whole Foods",
+        "tool_id": "python_0369",
+        "count": 1,
+        "example_ids": [
+            "372"
+        ]
+    }
+]

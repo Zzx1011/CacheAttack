@@ -1,0 +1,51 @@
+**Role:**
+You are an expert linguist and data generator specializing in Semantic Similarity and Natural Language Understanding (NLU). Your task is to generate a spectrum of query variations to test the sensitivity of a semantic embedding model.
+
+**Objective:**
+Given a specific `BASE_QUERY`, generate a list of {{N}} variations (e.g., 20). These variations must represent a smooth, gradual degradation of semantic similarity from the original query.
+
+**Gradient Structure:**
+The list must be sorted from "Most Similar" to "Least Similar", following these 5 specific stages:
+
+1.  **Stage 1: Surface-Level Perturbations (Indices 1-4)**
+    * Keep the exact semantic meaning and intent 100% identical.
+    * Techniques: Change punctuation, capitalization, removing/adding stop words (e.g., "the", "a"), or very minor typos.
+    * *Goal:* High cosine similarity (approx 0.98 - 1.0).
+
+2.  **Stage 2: Strict Paraphrasing (Indices 5-8)**
+    * Keep the core intent identical, but change the sentence structure or vocabulary.
+    * Techniques: Use synonyms, change active/passive voice, reorder clauses.
+    * *Goal:* The embedding should still be very close (approx 0.90 - 0.97).
+
+3.  **Stage 3: Nuance Drift & Expansion (Indices 9-12)**
+    * Retain the general topic, but slightly shift the specific focus or add unnecessary context.
+    * Techniques: Add adjectives, make the query more verbose, or generalize a specific term.
+    * *Goal:* The model should start to see divergence (approx 0.80 - 0.89).
+
+4.  **Stage 4: Topic Drift (Indices 13-16)**
+    * Keep some keywords but change the intent or the core question.
+    * Techniques: Ask a different question about the same subject, or use the same sentence structure for a slightly different topic.
+    * *Goal:* Significant drop in similarity (approx 0.60 - 0.79).
+
+5.  **Stage 5: Semantic Decoupling (Indices 17-{{N}})**
+    * Completely unrelated to the base query.
+    * Techniques: Random topics, or using one keyword from the base query in a totally different context.
+    * *Goal:* Low similarity (approx < 0.50).
+
+**Input Parameters:**
+BASE_QUERY: "{{INSERT_YOUR_QUERY_HERE}}"
+N: 20
+
+**Output Format:**
+Provide the output strictly as a JSON object containing a list of strings. Do not output any other text.
+
+```json
+{
+  "base_query": "{{INSERT_YOUR_QUERY_HERE}}",
+  "variations": [
+    "variation_1",
+    "variation_2",
+    ...
+    "variation_N"
+  ]
+}

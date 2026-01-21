@@ -12,7 +12,7 @@ class SemanticTemplater:
     against the original, and generate a final masked template.
     """
 
-    def __init__(self, api_key, base_url="https://api2.aigcbest.top/", model="gpt-3.5-turbo", temperature=0.0, 
+    def __init__(self, api_key, base_url="...", model="gpt-3.5-turbo", temperature=0.0, 
                  embedding_model_name="sentence-transformers/paraphrase-albert-small-v2", 
                  similarity_threshold=0.8):
         """
@@ -271,8 +271,8 @@ def run_templater(templater: SemanticTemplater, test_sentences: list):
 if __name__ == "__main__":
     # 1. Instantiate the class
     templater = SemanticTemplater(
-        api_key="sk-CcffxBpIslW0SD72BeudAi3OAFJUHCAeD3fO7wIbi83IbiUQ", 
-        model="gpt-3.5-turbo",
+        api_key="sk-...", 
+        model="...",
         similarity_threshold=0.8
     )
 

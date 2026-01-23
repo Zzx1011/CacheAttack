@@ -1,9 +1,3 @@
-# evaluation/targeted.py
-"""
-Targeted semantic prompt injection evaluation
-Makes a normal sentence + optimized suffix embedding-similar to a jailbreak/injection prompt
-Uses DynamicCSDTFluencyAttacker from attack/gcg_dynamic_ppl.py
-"""
 
 import torch
 import json

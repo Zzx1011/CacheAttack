@@ -1,8 +1,3 @@
-"""Evaluation script for RQ3: Tool invocation hijacking via semantic cache collision
-
-Replicates agentic setting from paper Section 6.4 using ReAct + GPTCache.
-Measures hit rate, tool hijack rate, and accuracy drop.
-"""
 
 import sys
 import io

@@ -177,4 +177,3 @@ if __name__ == "__main__":
 
     system.run("Calculate 12 * 15 + 100")
     system.run("Calculate twelve times fifteen plus one hundred")
-    # system.run("微软的创始人是谁？")

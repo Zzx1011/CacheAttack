@@ -1,72 +1,127 @@
-import json
-import re
-import time
-import requests
 import numpy as np
+from scipy.stats import norm
+from typing import List, Tuple, Optional
+import time
+import json
 from openai import OpenAI
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
-import sys
 
-# ================= 攻击者配置 =================
-ATTACKER_OPENAI_KEY = "sk-proj-......" # 攻击者自己的 Key (用于生成探针)
-TARGET_URL = "http://127.0.0.1:5000/chat"
-SEED_URL = "http://127.0.0.1:5000/admin/seed"
+ATTACKER_OPENAI_KEY = "sk-proj-......" 
 
-TARGET_QUERY = "What is the current capital requirement?"
-LOCAL_MODEL = "all-MiniLM-L6-v2"
-# ==============================================
-
-class RealWorldProber:
-    def __init__(self):
+class CacheThresholdEstimator:
+    """
+    Estimates the operational threshold for semantic cache hit/miss detection
+    using latency-based Gaussian mixture model.
+    """
+    
+    def __init__(self, cache_api, embedding_model):
+        """
+        Args:
+            cache_api: The target cache API to query
+            embedding_model: The surrogate embedding model
+        """
+        self.cache_api = cache_api
+        self.embedding_model = embedding_model
+        
+        # Parameters for hit/miss distributions
+        self.mu_hit = None  # Mean latency for cache hits
+        self.sigma_hit = None  # Std dev for cache hits
+        self.mu_miss = None  # Mean latency for cache misses
+        self.sigma_miss = None  # Std dev for cache misses
+        
+        # Estimated threshold
+        self.threshold = None
         self.client = OpenAI(api_key=ATTACKER_OPENAI_KEY)
-        self.local_model = SentenceTransformer(LOCAL_MODEL)
-        self.timing_threshold = 0.0 # 将通过校准自动设置
-
-    def calibrate_network_latency(self):
+        
+    def calibrate_latency_distributions(
+        self, 
+        seed_prompt: str,
+        n_hit_samples: int = 20,
+        n_miss_samples: int = 20
+    ) -> None:
         """
-        【关键步骤】动态校准网络延迟。
-        由于真实 LLM 响应时间波动，我们需要先测量基线。
+        Calibrate the latency distributions for cache hits and misses.
+        
+        Args:
+            seed_prompt: A seed prompt to generate calibration queries
+            n_hit_samples: Number of samples for estimating hit distribution
+            n_miss_samples: Number of samples for estimating miss distribution
         """
-        print("[*] Calibrating network and LLM latency...")
+        # Collect hit samples: repeated identical requests
+        hit_latencies = []
+        print(f"Collecting {n_hit_samples} hit samples...")
         
-        # 1. 确保目标已被缓存 (HIT Baseline)
-        requests.post(SEED_URL)
+        # First query to populate cache
+        _ = self.cache_api.query(seed_prompt)
+        time.sleep(0.5)  # Short wait to ensure cache is populated
         
-        # 测量 HIT 延迟 (取 3 次平均)
-        hit_times = []
-        for _ in range(5):
-            start = time.time()
-            requests.post(TARGET_URL, json={"query": TARGET_QUERY})
-            hit_times.append(time.time() - start)
-        avg_hit = sum(hit_times) / len(hit_times)
+        for i in range(n_hit_samples):
+            start_time = time.time()
+            _ = self.cache_api.query(seed_prompt)
+            latency = time.time() - start_time
+            hit_latencies.append(latency)
+            time.sleep(0.1)  # Small delay between queries
+            
+        # Collect miss samples: nonce-augmented queries (guaranteed misses)
+        miss_latencies = []
+        print(f"Collecting {n_miss_samples} miss samples...")
         
-        # 2. 测量 MISS 延迟 (使用一个随机乱码查询，确保穿透到 LLM)
-        # 注意：这会消耗服务器少量的 token
-        miss_times = []
-        for i in range(5):
-            random_q = f"Random query for calibration {time.time()} {i}"
-            start = time.time()
-            requests.post(TARGET_URL, json={"query": random_q})
-            miss_times.append(time.time() - start)
-        avg_miss = sum(miss_times) / len(miss_times)
+        for i in range(n_miss_samples):
+            # Add unique nonce to ensure cache miss
+            nonce_prompt = f"{seed_prompt} [NONCE_{i}_{np.random.randint(0, 10000)}]"
+            start_time = time.time()
+            _ = self.cache_api.query(nonce_prompt)
+            latency = time.time() - start_time
+            miss_latencies.append(latency)
+            time.sleep(0.1)
+            
+        # Convert to log-latency space
+        log_hit_latencies = np.log(hit_latencies)
+        log_miss_latencies = np.log(miss_latencies)
         
-        # 3. 设定阈值
-        # 阈值设为 HIT 和 MISS 的几何平均或中间点
-        self.timing_threshold = (avg_hit + avg_miss) / 2
+        # Estimate parameters using MLE (maximum likelihood estimation)
+        self.mu_hit = np.mean(log_hit_latencies)
+        self.sigma_hit = np.std(log_hit_latencies)
+        self.mu_miss = np.mean(log_miss_latencies)
+        self.sigma_miss = np.std(log_miss_latencies)
         
-        print(f"    Avg HIT Latency : {avg_hit:.4f}s")
-        print(f"    Avg MISS Latency: {avg_miss:.4f}s (Real LLM Call)")
-        print(f"    [!] Dynamic Threshold set to: {self.timing_threshold:.4f}s")
+        print(f"Hit distribution: μ={self.mu_hit:.4f}, σ={self.sigma_hit:.4f}")
+        print(f"Miss distribution: μ={self.mu_miss:.4f}, σ={self.sigma_miss:.4f}")
         
-        if avg_miss < avg_hit * 2:
-            print("[WARNING] Distinction between HIT and MISS is small. Attack may be unstable.")
-            sys.exit(1)
-
-    def generate_probes(self, n):
+    def predict_hit_or_miss(self, latency: float) -> Tuple[bool, float]:
+        """
+        Predict whether a query resulted in cache hit or miss using MAP rule.
+        
+        Args:
+            latency: Observed query latency in seconds
+            
+        Returns:
+            (is_hit, confidence): Boolean hit prediction and confidence score
+        """
+        if self.mu_hit is None or self.mu_miss is None:
+            raise ValueError("Must calibrate distributions first!")
+            
+        # Convert to log-latency
+        log_latency = np.log(latency)
+        
+        # Compute log-likelihood ratio
+        # log P(Y|H=1) - log P(Y|H=0)
+        ll_hit = norm.logpdf(log_latency, self.mu_hit, self.sigma_hit)
+        ll_miss = norm.logpdf(log_latency, self.mu_miss, self.sigma_miss)
+        
+        log_likelihood_ratio = ll_hit - ll_miss
+        
+        # MAP rule: predict hit if log-likelihood ratio > 0
+        is_hit = log_likelihood_ratio > 0
+        
+        # Confidence can be derived from likelihood ratio
+        confidence = abs(log_likelihood_ratio)
+        
+        return is_hit, confidence
+    
+    def generate_probes(self, seed_prompt, n):
         print(f"[*] Generating {n} semantic probes using GPT-4...")
         with open("probe_prompt.txt", "r") as f:
-            prompt = f.read().replace("{{INSERT_YOUR_QUERY_HERE}}", TARGET_QUERY).replace("{{N}}", str(n))
+            prompt = f.read().replace("{{INSERT_YOUR_QUERY_HERE}}", seed_prompt).replace("{{N}}", str(n))
         
         try:
             response = self.client.chat.completions.create(
@@ -76,160 +131,104 @@ class RealWorldProber:
             )
             data = json.loads(response.choices[0].message.content)
             variations = data.get("variations", [])
-            if TARGET_QUERY not in variations: variations.insert(0, TARGET_QUERY)
-            return variations
+            if seed_prompt not in variations: variations.insert(0, seed_prompt)
+
+            print(f"[*] Computing similarities for {len(variations)} probes...")
+            seed_embedding = self.embedding_model.encode(seed_prompt)
+            probes = []
+            for variation in variations:
+                var_embedding = self.embedding_model.encode(variation)
+                similarity = self._cosine_similarity(seed_embedding, var_embedding)
+                probes.append((variation, similarity))
+            
+            # Sort by similarity descending
+            probes.sort(key=lambda x: x[1], reverse=True)
+            return probes
         except Exception as e:
             print(f"[Error] {e}")
             return []
-
-    def measure_latency(self, text):
-        """Send a query and measure elapsed time."""
-        start = time.time()
-        requests.post(TARGET_URL, json={"query": text})
-        return time.time() - start
     
-    def em_infer_threshold(self, sims, latencies, max_iter=100):
+    def binary_search_threshold(
+        self, 
+        seed_prompt: str,
+        n_probes: int = 50,
+        max_queries: int = 10
+    ) -> float:
         """
-        EM to fit a 2-component Gaussian mixture for latency.
-        One corresponds to HIT, one to MISS.
-        The boundary is estimated in similarity space.
+        Estimate the operational threshold using binary search over probe set.
+        
+        Args:
+            seed_prompt: Seed prompt for generating probes
+            n_probes: Number of probes to generate
+            max_queries: Maximum number of queries (O(log N))
+            
+        Returns:
+            Estimated threshold τ̂
         """
-        t = np.array(latencies)
-        s = np.array(sims)
+        # Generate probe set
+        print(f"Generating {n_probes} probe variations...")
+        probes = self.generate_probes(seed_prompt, n_probes)
         
-        # Init: k-means-like split based on timing threshold
-        z = (t < self.timing_threshold).astype(float)
-
-        mu_H = t[z == 1].mean()
-        mu_M = t[z == 0].mean()
-        sigma_H = t[z == 1].std() + 1e-4
-        sigma_M = t[z == 0].std() + 1e-4
-
-        tau = np.median(s)
-
-        for _ in range(max_iter):
-            # E-step: compute posterior HIT probability for each sample
-            p_hit = (1.0 / (np.sqrt(2*np.pi)*sigma_H)) * np.exp(-0.5*((t - mu_H)/sigma_H)**2)
-            p_miss = (1.0 / (np.sqrt(2*np.pi)*sigma_M)) * np.exp(-0.5*((t - mu_M)/sigma_M)**2)
-
-            z = p_hit / (p_hit + p_miss + 1e-9)
-
-            # M-step: update means/variances
-            mu_H = np.sum(z * t) / np.sum(z)
-            mu_M = np.sum((1-z) * t) / np.sum((1-z))
-
-            sigma_H = np.sqrt(np.sum(z * (t-mu_H)**2) / np.sum(z))
-            sigma_M = np.sqrt(np.sum((1-z) * (t-mu_M)**2) / np.sum((1-z)))
-
-            # Update threshold: similarity where posterior HIT ≈ 0.5
-            tau = s[np.argmin(np.abs(z - 0.5))]
-
-        return tau
-
-    # -------------------------------------------------------
-    # Bootstrap confidence interval
-    # -------------------------------------------------------
-    def bootstrap_ci(self, sims, latencies, B=200):
-        ests = []
-        n = len(sims)
-        for _ in range(B):
-            idx = np.random.randint(0, n, n)
-            s_b = np.array(sims)[idx]
-            t_b = np.array(latencies)[idx]
-            ests.append(self.em_infer_threshold(s_b, t_b, max_iter=50))
-        return np.mean(ests), np.percentile(ests, 5), np.percentile(ests, 95)
-
-    def attack(self):
-        # Step 0: 植入目标 & 校准
-        self.calibrate_network_latency()
+        # First, insert seed_prompt into cache
+        print("Populating cache with seed prompt...")
+        _ = self.cache_api.query(seed_prompt)
+        time.sleep(1.0)  # Wait for cache to stabilize
         
-        # Step 1: 生成探针
-        probes = self.generate_probes(n=100)
+        # Binary search over probes
+        left, right = 0, len(probes) - 1
+        lowest_hit_idx = -1  # Lowest similarity that still hits
+        highest_miss_idx = len(probes)  # Highest similarity that misses
         
-        # Step 2: 本地排序
-        print("[*] Ranking probes locally...")
-        target_emb = self.local_model.encode([TARGET_QUERY])
-        probe_embs = self.local_model.encode(probes)
-        sims = cosine_similarity(target_emb, probe_embs)[0]
+        queries_used = 0
+        print("Starting binary search for threshold...")
         
-        ranked = [{"text": p, "score": float(s)} for p, s in zip(probes, sims)]
-        ranked.sort(key=lambda x: x["score"], reverse=True)
-        
-        # # Step 3: measure latency for every probe
-        # print("\n[*] Measuring latency for all probes...")
-        # # latencies = [self.measure_latency(p) for p in probes]
-        # latencies = []
-        # print(f"{'IDX':<4} | {'Sim':<8} | {'Latency':<10} | Status | Text")
-        # print("-" * 80)
-
-        # for i, p in enumerate(probes):
-        #     latency = self.measure_latency(p)
-        #     latencies.append(latency)
-
-        #     sim = sims[i]
-        #     status = "HIT" if latency < self.timing_threshold else "MISS"
-
-        #     print(f"{i:<4} | {sim:.4f} | {latency:.4f}s | {status:<5} | {p[:60]}")
-
-        # print("\n========== STEP 3: EM Threshold Inference ==========")
-        # raw_tau = self.em_infer_threshold(sims, latencies)
-        # print(f"Estimated threshold (EM): {raw_tau:.4f}")
-
-        # print("\n========== STEP 4: Bootstrap CI ==========")
-        # mean_tau, low_ci, high_ci = self.bootstrap_ci(sims, latencies)
-        # print(f"Bootstrap Mean τ: {mean_tau:.4f}")
-        # print(f"95% CI: [{low_ci:.4f}, {high_ci:.4f}]")
-
-        # print("\n========== DONE ==========")
-        
-        # Step 3: 二分查找
-        print("\n[*] Starting Binary Search Attack...")
-        print(f"    {'IDX':<4} | {'Local Sim':<10} | {'Latency':<10} | {'Status'}")
-        print("-" * 50)
-        
-        low = 0
-        high = len(ranked) - 1
-        boundary_idx = -1
-        
-        while low <= high:
-            mid = (low + high) // 2
-            probe = ranked[mid]
+        while left <= right and queries_used < max_queries:
+            mid = (left + right) // 2
+            probe_text, probe_sim = probes[mid]
             
-            # 测量时间
-            start = time.time()
-            requests.post(TARGET_URL, json={"query": probe['text']})
-            latency = time.time() - start
+            # Query the cache
+            start_time = time.time()
+            response = self.cache_api.query(probe_text)
+            latency = time.time() - start_time
+            queries_used += 1
             
-            # 判定
-            is_hit = latency < self.timing_threshold
-            status = "HIT" if is_hit else "MISS"
+            # Predict hit or miss
+            is_hit, confidence = self.predict_hit_or_miss(latency)
             
-            print(f"    {mid:<4} | {probe['score']:.4f}     | {latency:.4f}s   | {status}")
+            print(f"Query {queries_used}: sim={probe_sim:.4f}, "
+                  f"latency={latency:.4f}s, hit={is_hit}, conf={confidence:.4f}")
             
             if is_hit:
-                boundary_idx = mid
-                low = mid + 1 # 向更不相似的方向探索
+                lowest_hit_idx = mid
+                left = mid + 1  # Search for lower similarities that still hit
             else:
-                high = mid - 1 # 向更相似的方向回退
+                highest_miss_idx = mid
+                right = mid - 1  # Search for higher similarities
+                
+            # Wait before next query to avoid rate limiting
+            time.sleep(0.5)
         
-        # Step 4: 结果分析
-        if boundary_idx != -1 and boundary_idx < len(ranked) - 1:
-            hit_p = ranked[boundary_idx]
-            miss_p = ranked[boundary_idx + 1]
-            inferred_threshold = (hit_p['score'] + miss_p['score']) / 2
-            
-            print("\n" + "="*50)
-            print(" [SUCCESS] Real-world Boundary Inferred")
-            print("="*50)
-            print(f" Server Threshold (Hidden) : 0.92")
-            print(f" Inferred Threshold (Local): {inferred_threshold:.4f}")
-            print(f" Accuracy Gap              : {abs(0.92 - inferred_threshold):.4f}")
-            print("="*50)
+        # Estimate threshold as midpoint
+        if lowest_hit_idx == -1:
+            # All probes missed
+            self.threshold = 1.0
+        elif highest_miss_idx == len(probes):
+            # All probes hit
+            self.threshold = 0.0
         else:
-            print("\n[Fail] Could not determine boundary.")
+            # Midpoint between lowest hit and highest miss
+            hit_sim = probes[lowest_hit_idx][1]
+            miss_sim = probes[highest_miss_idx][1]
+            self.threshold = (hit_sim + miss_sim) / 2.0
+            
+        print(f"\nEstimated threshold: τ̂ = {self.threshold:.4f}")
+        print(f"Total queries used: {queries_used}")
         
-        return inferred_threshold
+        return self.threshold
+    
+    @staticmethod
+    def _cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
+        """Compute cosine similarity between two vectors."""
+        return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
-if __name__ == "__main__":
-    attacker = RealWorldProber()
-    inferred_threshold = attacker.attack()
+

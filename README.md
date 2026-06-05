@@ -86,3 +86,15 @@ ATTACKER_OPENAI_KEY = "sk-proj-YOUR_KEY_HERE"
 ## License
 
 MIT License. See `LICENSE` for details.
+
+## Citation
+
+If you find our work or this repository useful in your research, please consider citing our paper:
+
+```bibtex
+@article{zhang2026similarity,
+  title={From Similarity to Vulnerability: Key Collision Attack on LLM Semantic Caching},
+  author={Zhang, Zhixiang and Liu, Zesen and Xie, Yuchong and Huang, Quanfeng and She, Dongdong},
+  journal={arXiv preprint arXiv:2601.23088},
+  year={2026}
+}
